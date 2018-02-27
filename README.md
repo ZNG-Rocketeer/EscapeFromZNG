@@ -1,3 +1,3 @@
 # EscapeFromZNG
 EscapeFromZANGA - Escape Game in HTML CSS ...
-![ZNG AirOne](http://zngairone.tk/)
+[ZNG AirOne](http://zngairone.tk/)

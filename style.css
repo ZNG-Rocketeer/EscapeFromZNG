@@ -2,5 +2,11 @@ section{
   background-image: url(http://iwallpapers2.free.fr/images/Paysages/Hiver/Glace_bleu_-_Fond_ecran_Paysage.jpg);
   height: 500px;
   text-align: center;
-
+  font-family: sans-serif;
+  max-width: 100%;
+  -webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+filter: blur(5px);
 }

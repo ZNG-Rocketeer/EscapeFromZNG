@@ -1,12 +1,38 @@
-section{
-  background-image: url(http://iwallpapers2.free.fr/images/Paysages/Hiver/Glace_bleu_-_Fond_ecran_Paysage.jpg);
-  height: 500px;
-  text-align: center;
-  font-family: sans-serif;
+.container {
   max-width: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 500px;
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+.container>img{
+  vertical-align: center;
+  height: inherit;
+  left: 0px;
+  top:0px;
+  margin: 0px;
+  overflow: hidden;
   -webkit-filter: blur(5px);
--moz-filter: blur(5px);
--o-filter: blur(5px);
--ms-filter: blur(5px);
-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.centered {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: bold;
+  font-family:'Lato', Arial, sans-serif;
+}
+
+.header{
+  height: 50px;
+  background-color: white; 
 }

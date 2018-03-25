@@ -36,9 +36,9 @@
     /* Change la base de données en "php" */
     $conn->select_db("php");
 
-    $result = mysqli_query($conn,"SELECT * FROM users;");
-    echo $result;
-    var_dump($result);
+    $result = mysqli_query($conn,"SELECT * FROM php.users");
+    echo mysql_result($result,2);
+
 
     $conn->close();
     ?>

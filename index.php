@@ -27,8 +27,8 @@
     }
 
     // Perform queries
-    mysqli_query($con,"SELECT * FROM users");
-    
+    $res = mysqli_query($con,"SELECT * FROM users");
+    var_dump($res);
     mysqli_close($con);
     ?>
   </section>

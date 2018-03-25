@@ -20,11 +20,11 @@
     <p>3 sous énigmes sur différentes pages une énigme principale une page de présentation + annexes</p>
     <?php
     $servername = "localhost";
-    $username = "pi";
-    $password = "aironerpirpi";
+    $username = "php";
+    $password = "zngphpescape";
 
     // Create connection
-    $conn = new mysqli($servername, $username, $password);
+    $conn = new mysqli($servername, $username, $password,"php");
 
     // Check connection
     if ($conn->connect_error) {

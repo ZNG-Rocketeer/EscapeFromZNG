@@ -37,7 +37,7 @@
     $conn->select_db("php");
 
     $result = mysqli_query($conn,"SELECT * FROM php.users");
-    echo mysql_result($result,2);
+    echo mysql_result($result,0);
 
 
     $conn->close();

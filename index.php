@@ -20,8 +20,8 @@
     <p>3 sous énigmes sur différentes pages une énigme principale une page de présentation + annexes</p>
     <?php
     $servername = "localhost";
-    $username = "php";
-    $password = "zngphpescape";
+    $username = "pi";
+    $password = "aironerpirpi";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password);

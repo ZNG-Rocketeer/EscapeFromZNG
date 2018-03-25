@@ -19,27 +19,17 @@
   <section class="content">
     <p>3 sous énigmes sur différentes pages une énigme principale une page de présentation + annexes</p>
     <?php
-    $servername = "localhost";
-    $username = "php";
-    $password = "zngphpescape";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password);
-
+    $con=mysqli_connect("localhost","php","zngphpescape","php");
     // Check connection
-    if ($conn->connect_error) {
-      echo "not $conn->connect_error";
-      die("Connection failed: " . $conn->connect_error);
+    if (mysqli_connect_errno())
+    {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-    echo "Connected successfully<br/>";
 
-    /* Change la base de données en "php" */
-    $conn->select_db("php");
- echo "Test Select";
-    $result = mysqli_query("SELECT * FROM php.users");
-    echo mysql_result($result,0);
-
-    $conn->close();
+    // Perform queries
+    mysqli_query($con,"SELECT * FROM users");
+    
+    mysqli_close($con);
     ?>
   </section>
 </body>

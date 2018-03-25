@@ -20,8 +20,8 @@
     <p>3 sous énigmes sur différentes pages une énigme principale une page de présentation + annexes</p>
     <?php
     $servername = "localhost";
-    $username = "pi";
-    $password = "aironerpirpi";
+    $username = "php";
+    $password = "zngphpescape";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password);
@@ -35,23 +35,23 @@
 
 
     /* Retourne le nom de la base de données courante */
-    if ($result = $mysqli->query("SELECT DATABASE()")) {
+    if ($result = $conn->query("SELECT DATABASE()")) {
       $row = $result->fetch_row();
       printf("La base de données courante est %s.\n", $row[0]);
       $result->close();
     }
 
     /* Change la base de données en "world" */
-    $mysqli->select_db("php");
+    $conn->select_db("php");
 
     /* Retourne le nom de la base de données courante */
-    if ($result = $mysqli->query("SELECT DATABASE()")) {
+    if ($result = $conn->query("SELECT DATABASE()")) {
       $row = $result->fetch_row();
       printf("La base de données courante est %s.\n", $row[0]);
       $result->close();
     }
 
-    $mysqli->close();
+    $conn->close();
     ?>
   </section>
 </body>

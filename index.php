@@ -31,13 +31,13 @@
       echo "not $conn->connect_error";
       die("Connection failed: " . $conn->connect_error);
     }
-    echo "Connected successfully";
+    echo "Connected successfully<br/>";
 
 
     /* Retourne le nom de la base de données courante */
     if ($result = $conn->query("SELECT DATABASE()")) {
       $row = $result->fetch_row();
-      printf("La base de données courante est %s.\n", $row[0]);
+      printf("La base de données courante est %s.<br/>", $row[0]);
       $result->close();
     }
 
@@ -47,7 +47,7 @@
     /* Retourne le nom de la base de données courante */
     if ($result = $conn->query("SELECT DATABASE()")) {
       $row = $result->fetch_row();
-      printf("La base de données courante est %s.\n", $row[0]);
+      printf("La base de données courante est %s.<br/>", $row[0]);
       $result->close();
     }
 

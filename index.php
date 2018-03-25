@@ -33,23 +33,12 @@
     }
     echo "Connected successfully<br/>";
 
-
-    /* Retourne le nom de la base de données courante */
-    if ($result = $conn->query("SELECT DATABASE()")) {
-      $row = $result->fetch_row();
-      printf("La base de données courante est %s.<br/>", $row[0]);
-      $result->close();
-    }
-
-    /* Change la base de données en "world" */
+    /* Change la base de données en "php" */
     $conn->select_db("php");
 
-    /* Retourne le nom de la base de données courante */
-    if ($result = $conn->query("SELECT DATABASE()")) {
-      $row = $result->fetch_row();
-      printf("La base de données courante est %s.<br/>", $row[0]);
-      $result->close();
-    }
+    $result = mysqli_query($conn,"SELECT * FROM users;");
+    echo $result;
+    var_dump($result);
 
     $conn->close();
     ?>

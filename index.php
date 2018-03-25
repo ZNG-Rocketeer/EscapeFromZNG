@@ -24,7 +24,7 @@
     $password = "zngphpescape";
 
     // Create connection
-    $conn = new mysqli($servername, $username, $password,"php");
+    $conn = new mysqli($servername, $username, $password);
 
     // Check connection
     if ($conn->connect_error) {
@@ -32,6 +32,26 @@
       die("Connection failed: " . $conn->connect_error);
     }
     echo "Connected successfully";
+
+
+    /* Retourne le nom de la base de données courante */
+    if ($result = $mysqli->query("SELECT DATABASE()")) {
+      $row = $result->fetch_row();
+      printf("La base de données courante est %s.\n", $row[0]);
+      $result->close();
+    }
+
+    /* Change la base de données en "world" */
+    $mysqli->select_db("world");
+
+    /* Retourne le nom de la base de données courante */
+    if ($result = $mysqli->query("SELECT DATABASE()")) {
+      $row = $result->fetch_row();
+      printf("La base de données courante est %s.\n", $row[0]);
+      $result->close();
+    }
+
+    $mysqli->close();
     ?>
   </section>
 </body>

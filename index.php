@@ -42,7 +42,7 @@
     }
 
     /* Change la base de données en "world" */
-    $mysqli->select_db("world");
+    $mysqli->select_db("php");
 
     /* Retourne le nom de la base de données courante */
     if ($result = $mysqli->query("SELECT DATABASE()")) {

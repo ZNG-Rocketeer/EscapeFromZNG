@@ -35,7 +35,7 @@
 
     /* Change la base de données en "php" */
     $conn->select_db("php");
-
+ echo "Test Select";
     $result = mysqli_query($conn,"SELECT * FROM php.users");
     echo mysql_result($result,0);
 

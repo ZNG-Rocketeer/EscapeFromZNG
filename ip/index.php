@@ -5,6 +5,8 @@
     <title>IP</title>
   </head>
   <body>
-    <?php echo $_SERVER['SERVER_ADDR']; ?>
+    <?php
+  $external_ip = exec('curl http://ipecho.net/plain; echo');
+    echo $external_ip; ?>
   </body>
 </html>

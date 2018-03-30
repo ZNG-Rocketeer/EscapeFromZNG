@@ -5,6 +5,6 @@
     <title>IP</title>
   </head>
   <body>
-    <?php echo $_SERVER['SERVER_ADDR']; ?>
+    <?php $_SERVER['SERVER_ADDR']; ?>
   </body>
 </html>

@@ -16,21 +16,18 @@
     </div>
   </section>
   <h1 class="content">Règles</h1>
-  <section class="content">
-    <p>3 sous énigmes sur différentes pages une énigme principale une page de présentation + annexes</p>
-    <?php
-    $con=mysqli_connect("localhost","php","zngphpescape","php");
-    // Check connection
-    if (mysqli_connect_errno())
-    {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-
-    // Perform queries
-    $res = mysqli_query($con,"SELECT * FROM users");
-    var_dump($res);
-    mysqli_close($con);
-    ?>
-  </section>
+  <article class="">
+    <section class="content">
+      <p>3 sous énigmes sur différentes pages une énigme principale une page de présentation + annexes</p>
+    </section>
+    <section class="content">
+      <form class="user" action="index.php" method="post">
+        <input type="text" name="nom" placeholder="Nom">
+        <input type="text" name="prenom" placeholder="Votre prenom">
+        <input type="submit">
+      </form>
+    </section>
+  </article>
+  
 </body>
 </html>

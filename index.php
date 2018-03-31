@@ -6,9 +6,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="image">
+  <section class="backimg">
     <img src="img/hack.gif" alt="GIF Hack">
-    <div class="centered">
+    <div class="imgcontent">
       EscapeFromZNG
       <a href="enigme1.html" class="bouton">
         Jouer

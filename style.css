@@ -222,3 +222,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   -webkit-border-bottom-right-radius: 5px 9px;
   -webkit-border-bottom-left-radius: 5px 9px;
 }
+
+body{
+  background-color: zng-theme-l5;
+}

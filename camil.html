@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Enigme de Camil </title>
+
+    <script type="text/javascript">
+      
+      
+      function MotADeviner(mot)
+      {
+        var res="lemotlepluschiantdel'univers";
+        
+        cherche=document.getElementById("mot").value;
+        
+        if(res.indexOf(cherche)==-1)
+        {
+          document.getElementById("mot").value="";
+          
+        }
+        else
+        {
+          if(cherche.length<res.length)
+          {
+            if(res.indexOf(cherche)!=0)
+            {
+              document.getElementById("mot").value="";
+            }
+          }
+          if(res==cherche)
+          {
+            alert("BRAVO !!");
+          }
+        }
+      }
+    </script>
+    </head>
+    <body>
+      <form>
+        <label>Mot a deviner :
+          <input type="password" id="mot" onkeypress="MotADeviner(mot)" maxlength="28" required="required"/>
+        </label>
+        </form>      
+    </body>
+</html>
+

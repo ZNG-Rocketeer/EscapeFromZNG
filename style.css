@@ -226,3 +226,12 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 body{
   background-color: zng-theme-l5;
 }
+
+.warning {
+border: 2px solid #f39389;
+border-radius: 2px;
+padding: 10px;
+position: absolute;
+background-color: #fbd8d4;
+color: #3b3c40;
+}

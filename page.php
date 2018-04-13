@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+<script src="enigme.js" charset="utf-8"></script>
 <body>
 
   <!-- Header -->
@@ -18,7 +19,13 @@
     <div class="zng-solo">
       <div class="zng-card zng-container" style="min-height:460px">
         <h2>Unique</h2><br>
-
+        <div class="container">
+          <form>
+            <label>Mot a deviner :
+              <input type="password" id="mot" maxlength="27" required="required"/>
+            </label>
+          </form>
+        </div>
       </div>
     </div>
   </div>

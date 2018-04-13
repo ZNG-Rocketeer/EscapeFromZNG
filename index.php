@@ -56,7 +56,11 @@ session_start()
     <div class="zng-half zng-sec-half">
       <div class="zng-card zng-container" style="min-height:460px">
         <h2>Enigmes de la communauté</h2><br>
-
+        <a class="zng-padding-32" href="camil.html">
+          <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
+            Test enigme camil
+          </button>
+        </a>
       </div>
     </div>
   </div>

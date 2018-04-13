@@ -21,12 +21,6 @@ function MotADeviner(evt)
   {
     alert("BRAVO !!");
   }
-
-
-  /*Il faut tester la longueur du mot entré et regarder si la lettre correspond*/
-  /*Si la lettre correspond on l'ajoute sinon on l'enlève*/
-
-
 }
 
 ////////////////////////////////////////////////////////////////////////////////

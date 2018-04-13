@@ -235,3 +235,14 @@ position: absolute;
 background-color: #fbd8d4;
 color: #3b3c40;
 }
+
+#mot
+{
+width:275px;
+}
+
+.lien_secret
+{
+text-decoration:none;
+color:black;
+}

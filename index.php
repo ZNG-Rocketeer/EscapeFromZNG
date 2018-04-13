@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>EscapeFromZNG</title>
-  <meta charset ="utf8">
-  <link rel="stylesheet" href="style.css">
-</head>
+<title>EscapeFromZNG</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
 <body>
-  <section class="backimg">
-    <img src="img/hack.gif" alt="GIF Hack">
-    <div class="imgcontent">
-      EscapeFromZNG
-      <a href="enigme1.html" class="bouton">
-        Jouer
-      </a>
+
+  <!-- Header -->
+  <header class="zng-container zng-theme zng-padding" id="header">
+    <div class="zng-center">
+      <h1 class="zng-xxxlarge">EscapeFromZNG</h1>
+      <div class="zng-padding-32">
+        <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
+          Inscrivez-vous Gratuitement
+        </button>
+      </div>
     </div>
-  </section>
-  <h1 class="content">Règles</h1>
-  <article class="">
-    <section class="content">
-      <p>3 sous énigmes sur différentes pages une énigme principale une page de présentation + annexes</p>
-    </section>
-    <section class="content">
-      <form class="user" action="index.php" method="post">
-        <input type="text" name="nom" placeholder="Nom">
-        <input type="text" name="prenom" placeholder="Votre prenom">
-        <input type="submit">
-      </form>
-    </section>
-  </article>
-  
+  </header>
+
+  <div class="zng-row-padding zng-center zng-margin-top">
+    <div class="zng-half">
+      <div class="zng-card zng-container" style="min-height:460px">
+        <h2>Enigmes des créateurs</h2><br>
+
+      </div>
+    </div>
+
+    <div class="zng-half zng-sec-half">
+      <div class="zng-card zng-container" style="min-height:460px">
+        <h2>Enigmes de la communauté</h2><br>
+
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

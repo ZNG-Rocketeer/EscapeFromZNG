@@ -11,13 +11,8 @@ nav{
   min-height: 40%;
   background-color: #41a741;
   margin: 0;
+
 }
-.zng-padding-small{padding:4px 8px}.zng-padding{padding:8px 16px}.zng-padding-large{padding:12px 24px}
-.zng-padding-16{padding-top:16px;padding-bottom:16px}.zng-padding-24{padding-top:24px;padding-bottom:24px}
-.zng-padding-32{padding-top:32px;padding-bottom:32px}.zng-padding-48{padding-top:48px;padding-bottom:48px}
-.zng-padding-64{padding-top:64px;padding-bottom:64px}
-.zng-container{
-  padding:0.01em 16px
 
 article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,summary{
   display:block;
@@ -53,7 +48,6 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   font-weight: bold;
   font-family:'Lato', Arial, sans-serif;
 }
-
 .zng-button:hover{
   color:#000;
   background-color:#ccc
@@ -129,18 +123,10 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 .zng-disabled *,:disabled *{pointer-events:none}
 .zng-btn.zng-disabled:hover,.zng-btn:disabled:hover{box-shadow:none}
 
-.zng-btn,.zng-button{
-  border:none;
-  display:inline-block;
-  padding:8px 16px;
-  vertical-align:middle;
-  overflow:hidden;
-  text-decoration:none;
-  color:inherit;
-  background-color:inherit;
-  text-align:center;
-  cursor:pointer;
-  white-space:nowrap;
+.zng-half{
+  float:left;
+  width:42%;
+  padding:0 2.5% 0 5%;
 }
 .zng-sec-half{
   padding:0 5% 0 2.5%;

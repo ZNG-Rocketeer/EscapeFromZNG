@@ -18,7 +18,7 @@
   <div class="zng-row-padding zng-center zng-margin-top">
     <div class="zng-solo">
       <div class="zng-card zng-container">
-        <h2>Unique</h2><br>
+        <h2>Enigme 3 : "Picross"</h2><br>
         <table id="main">
           <?php
           for ($i=0; $i < 15; $i++) {

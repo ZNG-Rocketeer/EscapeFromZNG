@@ -22,6 +22,5 @@
       </div>
     </div>
   </div>
-<script src="enigme.js" charset="utf-8"></script>
 </body>
 </html>

@@ -14,17 +14,15 @@ session_start()
     <div class="zng-center">
       <h1 class="zng-xxxlarge">EscapeFromZNG</h1>
       <div class="zng-padding-32">
-        <?php
-        echo "<button class=\"zng-btn zng-xlarge zng-theme-dark zng-hover-teal\" onclick=\"document.getElementById('id01').style.display='block'\" style=\"font-weight:900\";>";
-        if (isset($_SESSION['logged'])) {
-          echo "Jouez maintenant";
-        }else{
-          echo "Inscrivez vous";
-        }
-        echo "</button>";
-        $_SESSION['logged']=yes;
-        ?>
-
+        <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style= "font-weight:900">
+          <?php
+          if ($_SESSION['zng-logged']==yes) {
+            echo "Jouez maintenant";
+          }else{
+            echo "Inscrivez vous";
+          }
+          ?>
+        </button>
       </div>
     </div>
   </header>
@@ -61,19 +59,19 @@ session_start()
             Enigme Pass
           </button>
         </a>
-	<br/>
-	<a class="zng-padding-32" href="enigme_lien.php">
+        <br/>
+        <a class="zng-padding-32" href="enigme_lien.php">
           <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
             Enigme Lien
           </button>
         </a>
-	<br/>
-	<a class="zng-padding-32" href="enigme_bas_de_page.php">
+        <br/>
+        <a class="zng-padding-32" href="enigme_bas_de_page.php">
           <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
             Enigme Bas de page
           </button>
         </a>
-	<br/>
+        <br/>
       </div>
     </div>
   </div>

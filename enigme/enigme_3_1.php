@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Check Enigme</title>
-  <link rel="stylesheet" href="tab.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="tab.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="assets/tab.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/tab.js" charset="utf-8"></script>
 </head>
 <body onload="resize_tab()">
   <nav class="zng-padding">
@@ -17,7 +17,7 @@
 
   <div class="zng-row-padding zng-center zng-margin-top">
     <div class="zng-solo">
-      <div class="zng-card zng-container">
+      <div class="zng-card">
         <h2>Enigme 3 : "Picross"</h2><br>
         <table id="main">
           <?php

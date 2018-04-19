@@ -39,7 +39,6 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 .zng-padding-64{padding-top:64px;padding-bottom:64px}
 .zng-container{
   padding:0.01em 16px
-
 }
 
 .zng-center{
@@ -134,13 +133,12 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   text-align: center;
   background-color: #000000;
   padding:20px;
-  margin:0 -3%;
   color: #41a741;
 }
 
 .zng-solo{
   width: 90%;
-  padding:0 5%;
+  margin: 5%;
 }
 
 .zng-solo h2{
@@ -161,6 +159,10 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   min-width: 400px;
   background-color: white;
 }
+
+.zng-card>p{
+  margin:2%
+}
 .zng-bar .zng-bar-item{
   padding:8px 16px;
   float:left;
@@ -176,7 +178,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   background-color: rgba(0,0,0,0.5);
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26),5px 5px 20px 0 rgba(0,0,0,0.32);
   border: 3px solid rgba(0,0,0,0.6);
-  padding: 12px 0px 12px 40px;
+  padding: 12px 0px 12px 20px;
   margin: 8px 0px 8px 0px;
   height: 25px;
   width: 90.5%;

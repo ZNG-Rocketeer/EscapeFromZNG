@@ -3,7 +3,7 @@
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css">
 
 <body>
 
@@ -17,7 +17,7 @@
 
   <div class="zng-row-padding zng-center zng-margin-top">
     <div class="zng-solo">
-      <div class="zng-card zng-container" style="min-height:460px">
+      <div class="zng-card" style="min-height:460px">
         <h2>Enigme 1</h2><br>
         <div class="container">
           <form>
@@ -29,6 +29,6 @@
       </div>
     </div>
   </div>
-<script src="enigme.js" charset="utf-8"></script>
+<script src="assets/enigme.js" charset="utf-8"></script>
 </body>
 </html>

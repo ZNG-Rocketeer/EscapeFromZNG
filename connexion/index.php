@@ -1,10 +1,14 @@
+<?php
+session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css">
 <body>
+
 
   <!-- Header -->
   <nav class="zng-padding">
@@ -16,7 +20,7 @@
 
   <div class="zng-row-padding zng-center zng-margin-top">
     <div class="zng-half">
-      <div class="zng-card zng-container zng-form">
+      <div class="zng-card zng-form">
         <h2>Connexion</h2><br>
         <form class="log" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
           Mail ou pseudo:
@@ -28,13 +32,15 @@
             <input type="checkbox" > Se souvenir de moi <br>
           </label>
           <a href="#">Mot de passe oublié</a>
-
+          <?php
+          $_SESSION['znglogged']=yes;
+           ?>
         </form>
       </div>
     </div>
 
     <div class="zng-half zng-sec-half">
-      <div class="zng-card zng-container zng-form" id="sign">
+      <div class="zng-card zng-form" id="sign">
         <h2>Inscription</h2><br>
         <form class="sign" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
           <fieldset>

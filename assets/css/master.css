@@ -21,7 +21,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 
 #header {
   color:#fff;
-  background-image: url(img/hack.gif);
+  background-image: url(../img/hack.gif);
   background-position: center;
   background-size: cover;
   background-origin: content-box;
@@ -46,6 +46,11 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   font-weight: bold;
   font-family:'Lato', Arial, sans-serif;
 }
+
+.zng-right{
+  text-align: right;
+}
+
 .zng-button:hover{
   color:#000;
   background-color:#ccc
@@ -159,7 +164,9 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   min-width: 400px;
   background-color: white;
 }
-
+.zng-card>div{
+  padding-left:5%
+}
 .zng-card>p{
   margin:2%
 }
@@ -186,6 +193,47 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 
   box-sizing: content-box;
 }
+.share{
+  cursor:pointer;
+  color: green;
+  text-decoration: underline;
+  text-decoration-style:dotted;
+}
+
+.important{
+  color: red;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.profil{
+  border-radius: 50%;
+  border:none;
+  width: 100px;
+  height: 100px;
+  color: black;
+  background-color: teal;
+  background-image: url("../img/defaut.png");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  float: right;
+
+padding: 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+z-index: 1
+
+}
+
+#sharepanel{
+  position: absolute;
+  visibility: hidden;
+}
 
 .zng-btn-form{
   background-color:black;
@@ -209,26 +257,26 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 }
 
 body{
-  background-color: #38414C;
+  background-color: #28313C;
   height: 100%
 }
 
 .warning {
-border: 2px solid #f39389;
-border-radius: 2px;
-padding: 10px;
-position: absolute;
-background-color: #fbd8d4;
-color: #3b3c40;
+  border: 2px solid #f39389;
+  border-radius: 2px;
+  padding: 10px;
+  position: absolute;
+  background-color: #fbd8d4;
+  color: #3b3c40;
 }
 
 #mot
 {
-width:275px;
+  width:275px;
 }
 
 .lien_secret
 {
-text-decoration:none;
-color:black;
+  text-decoration:none;
+  color:black;
 }

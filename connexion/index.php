@@ -1,12 +1,12 @@
 <?php
 session_start();
- ?>
+?>
 <!DOCTYPE html>
 <html>
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="../assets/css/master.css">
 <body>
 
 
@@ -15,27 +15,30 @@ session_start();
     <a href="/" class="zng-bar-item zng-button">Accueil</a>
     <a href="/page.php" class="zng-bar-item zng-button">Solo</a>
     <a href="/pagehalf.php" class="zng-bar-item zng-button">Duo</a>
-    <a href="/signup.php" class="zng-bar-item zng-button">Inscription</a>
+    <a href="/connexion" class="zng-bar-item zng-button">Inscription</a>
   </nav>
 
   <div class="zng-row-padding zng-center zng-margin-top">
     <div class="zng-half">
       <div class="zng-card zng-form">
-        <h2>Connexion</h2><br>
-        <form class="log" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-          Mail ou pseudo:
-          <input class="zng-text-form" type="text" name="login"><br>
-          Mot de passe:
-          <input class="zng-text-form" type="password" name="pass"> <br>
-          <input class="zng-btn-form" type="submit" value="Se connecter">
-          <label>
-            <input type="checkbox" > Se souvenir de moi <br>
-          </label>
-          <a href="#">Mot de passe oublié</a>
-          <?php
-          $_SESSION['znglogged']=yes;
-           ?>
-        </form>
+        <h2>Connexion</h2>
+        <p>
+          <form class="log" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+            Mail ou pseudo:
+            <input class="zng-text-form" type="text" name="login"><br>
+            Mot de passe:
+            <input class="zng-text-form" type="password" name="pass"> <br>
+            <input class="zng-btn-form" type="submit" value="Se connecter">
+            <label>
+              <input type="checkbox" > Se souvenir de moi <br>
+            </label>
+            <a href="#">Mot de passe oublié</a>
+            <?php
+            $_SESSION['znglogged']=yes;
+            $_SESSION['zngnom']=airone;
+            ?>
+          </form>
+        </p>
       </div>
     </div>
 
@@ -74,10 +77,10 @@ session_start();
             </label><br><br>
             Réseaux sociaux <br>
             <label>
-               Facebook <input class="zng-text-form" type="text" name="fb">
+              Facebook <input class="zng-text-form" type="text" name="fb">
             </label><br>
             <label>
-               twitter <input class="zng-text-form" type="text" name="tt">
+              twitter <input class="zng-text-form" type="text" name="tt">
             </label><br><br>
             <label>
               Description <input class="zng-text-form" type="textarea" name="Description">

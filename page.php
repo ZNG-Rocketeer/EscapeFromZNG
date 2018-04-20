@@ -20,33 +20,38 @@
       <div  class="zng-card" style="min-height:500px">
         <h2>Unique</h2>
         <p>
-          
+
           <a class="zng-padding-32" href="pagehalf.php">
-            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
               Exemple de page duo
             </button>
           </a><br>
 
           <a class="zng-padding-32" href="connexion">
-            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
               Exemple de page inscrption
             </button>
           </a><br>
-          <a class="zng-padding-32" href="enigme_pass.php">
-            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
+          <a class="zng-padding-32" href="enigme/enigme_1_1.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
               Enigme Pass
             </button>
           </a>
           <br/>
-          <a class="zng-padding-32" href="enigme_lien.php">
-            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
+          <a class="zng-padding-32" href="enigme/enigme_2_1.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
               Enigme Lien
             </button>
           </a>
           <br/>
-          <a class="zng-padding-32" href="enigme_bas_de_page.php">
-            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
+          <a class="zng-padding-32" href="enigme/enigme_2_2.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
               Enigme Bas de page
+            </button>
+          </a><br>
+          <a class="zng-padding-32" href="enigme/enigme_3_1.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Enigme picross
             </button>
           </a>
         </p>

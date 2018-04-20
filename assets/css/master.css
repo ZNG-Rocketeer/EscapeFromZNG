@@ -71,7 +71,8 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 }
 
 .zng-xlarge{
-  font-size:24px
+  font-size:24px;
+  font-weight:900;
 }
 
 

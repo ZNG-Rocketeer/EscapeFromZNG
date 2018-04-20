@@ -15,12 +15,11 @@
     <a href="/connexion" class="zng-bar-item zng-button">Inscription</a>
   </nav>
 
-  <div class="zng-row-padding zng-center zng-margin-top">
+  <div class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div class="zng-card">
         <h2>Enigme 3 : "Picross"</h2><br>
         <div class="1">
-
           <table id="main">
             <?php
             for ($i=0; $i < 15; $i++) {

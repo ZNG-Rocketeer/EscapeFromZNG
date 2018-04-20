@@ -18,7 +18,7 @@ session_start();
     <a href="/connexion" class="zng-bar-item zng-button">Inscription</a>
   </nav>
 
-  <div class="zng-row-padding zng-center zng-margin-top">
+  <div class="zng-center zng-margin-top">
     <div class="zng-half">
       <div class="zng-card zng-form">
         <h2>Connexion</h2>

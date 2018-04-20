@@ -15,7 +15,7 @@
     <a href="/connexion" class="zng-bar-item zng-button">Inscription</a>
   </nav>
 
-  <div class="zng-row-padding zng-center zng-margin-top">
+  <div class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div class="zng-card" style="min-height:460px">
         <h2>Enigme 2 partie 2</h2><br>

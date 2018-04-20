@@ -32,7 +32,7 @@ session_start()
     <span class="important">Javascript est désactivé, vous avez besoin d'activer javascript pour poursuivre sur notre site sans quoi votre expérience sera gachée</span>
   </noscript>
 
-  <div class="zng-row-padding zng-center zng-margin-top">
+  <div class="zng-center zng-margin-top">
     <div class="zng-half">
       <div class="zng-card" style="min-height:460px">
         <h2>Enigmes des créateurs</h2>

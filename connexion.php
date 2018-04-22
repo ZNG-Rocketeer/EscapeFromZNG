@@ -15,7 +15,7 @@
         <input type="email" required />
       </label>
       <br>
-      <label>
+      <label> 
       Mot de passe<br />
       <input type="password" required >
     </label>

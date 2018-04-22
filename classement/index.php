@@ -5,7 +5,7 @@
     <title>Classement</title>
   </head>
   <body>
-    <?php
+    <?php include '../assets/php/page_gen.php'
     $con=mysqli_connect("localhost","php","zngphpescape","php");
     // Check connection
     if (mysqli_connect_errno())

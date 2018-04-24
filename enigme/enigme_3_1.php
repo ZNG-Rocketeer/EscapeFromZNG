@@ -8,13 +8,13 @@
   <script src="../assets/js/tab.js" charset="utf-8"></script>
 </head>
 <body onload="resize_tab()">
-  <?php include '../assets/php/page_gen.php'
+  <?php include '../assets/php/gen_nav.php'
    ?>
 
   <div class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div class="zng-card">
-        <h2>Enigme 3 : "Picross"</h2><br>
+        <h2>Enigme 3 : "Picross"</h2>
         <div class="1">
           <table id="main">
             <?php

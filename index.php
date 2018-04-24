@@ -11,7 +11,17 @@ session_start()
 <body>
   <!-- Header -->
   <header class="zng-container zng-theme zng-padding" id="header">
+    <?php
+    if ($_SESSION['znglogged']==yes) {
+      echo "
+        <figure class=\"profil\">
+      <button type=\"button\" name=\"button\" class=\"profil\" onclick=\"document.location.href = 'profile';\"></button>
+      <figcaption>"."".$_SESSION['zngnom']."</figcaption>
+      </figure>
+      ";
+    }
 
+    ?>
     <div class="zng-center">
       <h1 class="zng-xxxlarge">EscapeFromZNG</h1>
       <div class="zng-padding-32">
@@ -34,7 +44,7 @@ session_start()
 
   <div class="zng-center zng-margin-top">
     <div class="zng-half">
-      <div class="zng-card" style="min-height:460px">
+      <div class="zng-card" >
         <h2>Enigmes des créateurs</h2>
         <p>
           Vous avez été piraté et on vous a dérobé des informations privées de haute importance les hackers ont laissé une trace derrière eux déchiffrez leur nom et découvrez qui se cache derrière cette attaque.
@@ -68,7 +78,7 @@ session_start()
     </div>
 
     <div class="zng-half zng-sec-half">
-      <div class="zng-card" style="min-height:460px">
+      <div class="zng-card" >
         <h2>Enigmes de la communauté</h2>
         <p>
           <a class="zng-padding-32" href="page.php">
@@ -76,9 +86,11 @@ session_start()
               Exemple de page solo
             </button>
           </a><br>
-          
-          <button type="button" name="button" class="profil" onclick="document.location.href = 'profile';"></button>
+
+
+
           <br/>
+
         </p>
       </div>
     </div>

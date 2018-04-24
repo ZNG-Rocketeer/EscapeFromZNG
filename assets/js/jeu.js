@@ -15,3 +15,35 @@ function shareout(){
   panel=document.getElementById("sharepanel")
   panel.style.visibility="hidden";
 }
+
+function fs(n) {
+  //parseInt(document.getElementById("fsn").innerHTML);
+    switch (n) {
+    case 1:
+        document.getElementById("fs1").style.display = "inline";
+        document.getElementById("fs2").style.display = "none";
+        document.getElementById("fs3").style.display = "none";
+        document.getElementById("btn1").setAttribute("disabled", "");
+        document.getElementById("btn2").removeAttribute("disabled");
+        document.getElementById("fsn").innerHTML = "1";
+        break;
+    case 2:
+        document.getElementById("fs1").style.display = "none";
+        document.getElementById("fs2").style.display = "inline";
+        document.getElementById("fs3").style.display = "none";
+        document.getElementById("btn1").removeAttribute("disabled");
+        document.getElementById("btn2").removeAttribute("disabled");
+        document.getElementById("fsn").innerHTML = "2";
+        break;
+    case 3:
+        document.getElementById("fs1").style.display = "none";
+        document.getElementById("fs2").style.display = "none";
+        document.getElementById("fs3").style.display = "inline";
+        document.getElementById("btn1").removeAttribute("disabled");
+        document.getElementById("btn2").setAttribute("disabled", "");
+        document.getElementById("fsn").innerHTML = "3";
+        break;
+    default:
+        break;
+    }
+}

@@ -41,10 +41,13 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   padding:0.01em 16px
 }
 
-.zng-center{
+#header>.zng-center{
   text-align:center;
   font-weight: bold;
   font-family:'Lato', Arial, sans-serif;
+}
+.zng-center{
+  text-align:center;
 }
 
 .zng-right{
@@ -164,13 +167,23 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   bottom: 0;
   min-width: 400px;
   background-color: white;
+  min-height:460px;
+  height: 80%
 }
 .zng-card>div{
-  padding-left:5%
+  padding-left:3%
+
 }
 .zng-card>p{
-  margin:2%
+  margin:2%;
+  font-weight: bold;
+  font-family:'Lato', Arial, sans-serif;
 }
+.zng-card>div.p{
+  font-weight: bold;
+  font-family:'Lato', Arial, sans-serif;
+}
+
 .zng-bar .zng-bar-item{
   padding:8px 16px;
   float:left;
@@ -207,28 +220,39 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   font-family: sans-serif;
 }
 
-.profil{
+figure.profil{
+  text-align: center;
+  background-color: white;
+  border-radius: 15%;
+  border: solid 2px black;
+  width: 130px;
+  height: 140px;
+  color: black;
+  float: right;
+  z-index: 2
+}
+
+button.profil{
   border-radius: 50%;
   border:none;
   width: 100px;
   height: 100px;
-  color: black;
-  background-color: teal;
+  color: white;
+  font-size: 16px;
+
+  background-color: darkgreen;
   background-image: url("../img/defaut.png");
   background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
-  float: right;
 
-padding: 20px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin: 4px 2px;
-cursor: pointer;
-z-index: 1
-
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  z-index: 1;
 }
 
 #sharepanel{
@@ -236,7 +260,7 @@ z-index: 1
   visibility: hidden;
 }
 
-.zng-btn-form{
+.zng-btn-form,.zng-btn-form-half{
   background-color:black;
   color: white;
 
@@ -249,9 +273,29 @@ z-index: 1
   cursor: pointer;
   box-sizing: content-box;
 }
-#sign{
-  overflow-y: scroll;
+.zng-btn-form-half{
+  width: 48.5%;
+  display: inline-block;
+  float:left;
+  color:#41a741;
 }
+.zng-btn-form-half+.zng-btn-form-half{
+  float: right;
+}
+.zng-btn-form-half[disabled]{
+  background-color: grey;
+  cursor: default;
+  border-color: grey;
+  color: white;
+}
+
+.zng-arrow-form{
+  margin: 0;
+  padding: 0 10;
+  width: 100%;
+}
+
+
 
 .zng-form{
   height: 500px;
@@ -271,6 +315,10 @@ body{
   color: #3b3c40;
 }
 
+.zng-footer{
+  bottom: 0;
+}
+
 #mot
 {
   width:275px;
@@ -280,4 +328,31 @@ body{
 {
   text-decoration:none;
   color:black;
+}
+#fs1,#fs2,#fs3{
+  width: 95%;
+}
+
+
+#fs2,#fs3{
+  display:none;
+}
+
+#color
+{
+  color:white;
+}
+#fsn{
+  display: none;
+}
+
+.label
+{
+  width: 30px;
+  center;
+}
+
+#formeni41>input{
+  margin:0 100px 5px 0;
+  display: inline;
 }

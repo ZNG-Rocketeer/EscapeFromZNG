@@ -7,7 +7,7 @@
 <script src="assets/js/tailles.js" charset="utf-8"></script>
 
 <body onload="taille()" onresize="taille()">
-  <?php include '../assets/php/page_gen.php'
+  <?php include 'assets/php/gen_nav.php'
    ?>
 
   <div id="card" class="zng-center zng-margin-top">
@@ -20,13 +20,13 @@
             <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
               Exemple de page duo
             </button>
-          </a><br>
+          </a><br/>
 
           <a class="zng-padding-32" href="connexion">
             <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
-              Exemple de page inscrption
+              Exemple de page inscription
             </button>
-          </a><br>
+          </a><br/>
           <a class="zng-padding-32" href="enigme/enigme_1_1.php">
             <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
               Enigme Pass
@@ -43,12 +43,22 @@
             <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
               Enigme Bas de page
             </button>
-          </a><br>
+          </a><br/>
           <a class="zng-padding-32" href="enigme/enigme_3_1.php">
             <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
-              Enigme picross
+              Enigme Picross
             </button>
-          </a>
+          </a><br/>
+          <a class="zng-padding-32" href="enigme/enigme_3_2.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Enigme Couleur
+            </button>
+          </a><br/>
+          <a class="zng-padding-32" href="enigme/enigme_4_1.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Enigme Label
+            </button>
+          </a><br/>
         </p>
       </div>
     </div>

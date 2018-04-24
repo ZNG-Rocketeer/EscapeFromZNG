@@ -11,18 +11,19 @@ session_start()
 
 <body onload="taille()" onresize="taille()">
   <!-- Header -->
-  <?php include '../assets/php/page_gen.php'
+  <?php include '../assets/php/gen_nav.php'
    ?>
 
   <div id="card" class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div  class="zng-card" style="min-height:500px">
-        <h2>Bienvenue<?php echo " ".$_SESSION["zngnom"];?></h2><br>
+        <h2>Bienvenue<?php echo " ".$_SESSION["zngnom"];?></h2>
         <!--
         nom
         prenom
         Pseudo
         ...
+        adresse pour partager mon profile
       -->
     </div>
   </div>

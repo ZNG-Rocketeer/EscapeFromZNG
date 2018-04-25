@@ -18,7 +18,7 @@
           if (isset($_POST['genre']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date_naiss']) && isset($_POST['pseudo']) && isset($_POST['mail']) && isset($_POST['zngpass'])) {
             // if select (pseudo ||) mail non vide location href connexion/index.php?signup=fail
             //INSERT INTO `zng_user` (`pseudo`, `pass`, `genre`, `nom`, `prenom`, `email`, `date_insc`, `date_naiss`) VALUES ('$_POST["pseudo"]', '$_POST["zngpass"]', '$_POST["genre"]', '$_POST["nom"]', '$_POST["prenom"]', '$_POST["mail"]', CURRENT_TIMESTAMP, '$_POST["date_naiss"]')
-            echo '$_POST["pseudo"]', '$_POST["zngpass"]', '$_POST["genre"]', '$_POST["nom"]', '$_POST["prenom"]', '$_POST["mail"]', '$_POST["date_naiss"]';
+            echo $_POST['pseudo']+$_POST['zngpass']+$_POST['genre']+$_POST['nom']+$_POST['prenom']+$_POST['mail']+$_POST['date_naiss'];
         }
 
         }

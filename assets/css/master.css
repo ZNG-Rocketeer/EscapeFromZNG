@@ -130,6 +130,10 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 .zng-disabled *,:disabled *{pointer-events:none}
 .zng-btn.zng-disabled:hover,.zng-btn:disabled:hover{box-shadow:none}
 
+.zng-solo{
+  width: 90%;
+  margin: 5%;
+}
 .zng-half{
   float:left;
   width:42%;
@@ -138,26 +142,8 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 .zng-sec-half{
   padding:0 5% 0 2.5%;
 }
-.zng-half h2{
-  text-align: center;
-  background-color: #000000;
-  padding:20px;
-  color: #41a741;
-}
 
-.zng-solo{
-  width: 90%;
-  margin: 5%;
-}
 
-.zng-solo h2{
-  text-align: center;
-  background-color: #000000;
-  padding:20px 0 ;
-  margin: 0;
-  width: 100%;
-  color: #41a741;
-}
 
 .zng-margin-top{margin-top:30px}
 
@@ -168,7 +154,16 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   min-width: 400px;
   background-color: white;
   min-height:460px;
-  height: 80%
+  height: 80%;
+  border-radius: 2%
+}
+.zng-card h2{
+  text-align: center;
+  background-color: #000000;
+  padding:20px 0 ;
+  margin: 0;
+  width: 100%;
+  color: #41a741;
 }
 .zng-card>div{
   padding-left:3%
@@ -342,7 +337,7 @@ body{
 {
   color:white;
 }
-#fsn{
+.zng-data{
   display: none;
 }
 
@@ -350,6 +345,16 @@ body{
 {
   width: 30px;
   center;
+}
+.rect-fsn{
+  width: 20px;
+  height: 2px;
+  background-color: red;
+  border-radius: 30%;
+  border: 2px solid black;
+  padding: 2px 40px;
+  display: inline-block;
+  margin: 0 20px;
 }
 
 #formeni41>input{

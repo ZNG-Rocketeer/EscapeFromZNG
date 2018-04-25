@@ -11,19 +11,19 @@ session_start();
 <body onload="fs(1);">
 
 
-  <?php include '../assets/php/gen_nav.php'
-  ?>
+  <?php include '../assets/php/gen_nav.php'  ?>
+
 
   <div class="zng-center zng-margin-top">
     <div class="zng-half">
       <div class="zng-card zng-form">
-        <h2>Connexion</h2>
-        <p>
+        <h2>Connexion</h2><br>
           <?php if ($_GET['log']=="wrong") {
             echo "connexion echouée";
           } ?>
           <form name ="log" class="log" action="log.php" method="post">
-            Mail ou pseudo:
+	<fieldset>
+		Mail ou pseudo:
             <input class="zng-text-form" type="text" name="login"><br>
             Mot de passe:
             <input class="zng-text-form" type="password" name="pass"> <br>
@@ -36,7 +36,7 @@ session_start();
             $_SESSION['znglogged']=yes;
             $_SESSION['zngnom']=airone;
             ?>
-            <a href="signup.php">signup</a>
+ 	</fieldset>
           </form>
         </p>
       </div>
@@ -44,7 +44,7 @@ session_start();
 
     <div class="zng-half zng-sec-half" >
       <div class="zng-card zng-form" id="sign">
-        <h2>Inscription</h2>
+        <h2>Inscription</h2><br>
         <form name="sign" class="sign" action="signup.php" method="post">
           <?php if ($_GET['signup']=="fail") {
             echo "<span class=\"important\">Cet email est déjà utilisé pour un compte dans notre base de donnée</span>";
@@ -64,7 +64,7 @@ session_start();
             <label>
               Prénom <input class="zng-text-form" type="text" name="prenom" placeholder="Entrez votre Prénom" required="required"/>
             </label>
-            <label>Date de naissance <input class="zng-text-form" type="date" name="date_naiss" value="1970-01-01" required="required"> </label>
+            <label>Date de naissance <input class="zng-text-form" type="date" name="date_naiss" required="required"> </label>
           </fieldset>
           <fieldset id="fs2">
             <legend>Informations Public</legend>

@@ -7,9 +7,7 @@
 <script src="assets/js/tailles.js" charset="utf-8"></script>
 
 <body onload="taille()" onresize="taille()">
-  <?php include 'assets/php/gen_nav.php'
-   ?>
-
+  <?php include 'assets/php/gen_nav.php'?>
   <div id="card" class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div  class="zng-card" style="min-height:500px">
@@ -63,5 +61,6 @@
       </div>
     </div>
   </div>
+<script src="assets/enigme.js" charset="utf-8"></script>
 </body>
 </html>

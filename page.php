@@ -3,22 +3,63 @@
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/css/master.css">
+<script src="assets/js/tailles.js" charset="utf-8"></script>
 
-<body>
+<body onload="taille()" onresize="taille()">
+  <?php include 'assets/php/gen_nav.php'
+   ?>
 
-  <!-- Header -->
-  <nav class="zng-padding">
-    <a href="/" class="zng-bar-item zng-button">Accueil</a>
-    <a href="/page.php" class="zng-bar-item zng-button">Solo</a>
-    <a href="/pagehalf.php" class="zng-bar-item zng-button">Duo</a>
-    <a href="/signup.php" class="zng-bar-item zng-button">Inscription</a>
-  </nav>
-
-  <div class="zng-row-padding zng-center zng-margin-top">
+  <div id="card" class="zng-center zng-margin-top">
     <div class="zng-solo">
-      <div class="zng-card zng-container" style="min-height:460px">
-        <h2>Unique</h2><br>
+      <div  class="zng-card" style="min-height:500px">
+        <h2>Unique</h2>
+        <p>
+
+          <a class="zng-padding-32" href="pagehalf.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Exemple de page duo
+            </button>
+          </a><br/>
+
+          <a class="zng-padding-32" href="connexion">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Exemple de page inscription
+            </button>
+          </a><br/>
+          <a class="zng-padding-32" href="enigme/enigme_1_1.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Enigme Pass
+            </button>
+          </a>
+          <br/>
+          <a class="zng-padding-32" href="enigme/enigme_2_1.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Enigme Lien
+            </button>
+          </a>
+          <br/>
+          <a class="zng-padding-32" href="enigme/enigme_2_2.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Enigme Bas de page
+            </button>
+          </a><br/>
+          <a class="zng-padding-32" href="enigme/enigme_3_1.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Enigme Picross
+            </button>
+          </a><br/>
+          <a class="zng-padding-32" href="enigme/enigme_3_2.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Enigme Couleur
+            </button>
+          </a><br/>
+          <a class="zng-padding-32" href="enigme/enigme_4_1.php">
+            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
+              Enigme Label
+            </button>
+          </a><br/>
+        </p>
       </div>
     </div>
   </div>

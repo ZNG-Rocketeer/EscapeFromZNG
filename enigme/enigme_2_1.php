@@ -3,22 +3,17 @@
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="../assets/css/master.css">
 
 <body>
 
-  <!-- Header -->
-  <nav class="zng-padding">
-    <a href="/" class="zng-bar-item zng-button">Accueil</a>
-    <a href="/page.php" class="zng-bar-item zng-button">Solo</a>
-    <a href="/pagehalf.php" class="zng-bar-item zng-button">Duo</a>
-    <a href="/signup.php" class="zng-bar-item zng-button">Inscription</a>
-  </nav>
+  <?php include '../assets/php/gen_nav.php'
+   ?>
 
-  <div class="zng-row-padding zng-center zng-margin-top">
+  <div class="zng-center zng-margin-top">
     <div class="zng-solo">
-      <div class="zng-card zng-container" style="min-height:460px">
-        <h2>Enigme 2</h2><br>
+      <div class="zng-card" >
+        <h2>Enigme 2</h2>
         <p class="enigme">
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet dapibus eros, non efficitur lectus. Morbi facilisis consectetur elit, eu tempus quam ultricies at. Donec sollicitudin ligula sit amet justo auctor, in dignissim lacus volutpat. In ante lectus, ornare quis malesuada at, pharetra sagittis diam. Quisque viverra auctor volutpat. Cras in ligula erat. Etiam iaculis rutrum elit, vitae placerat est fringilla ut. Nunc ornare tellus arcu, nec vehicula neque fermentum a.<br/>
 	Donec cursus ante et dolor posuere pretium. Quisque hendrerit ante quis libero gravida pharetra. Fusce nec lobortis quam. Vestibulum sapien mi, aliquam vitae placerat ut, dignissim in sem. Praesent eu augue id ante convallis sodales sit amet quis massa. Fusce consequat felis eu augue laoreet luctus ac in nibh. Sed non nulla ac risus cursus pretium ut ut nisi. Vivamus et sollicitudin est, in faucibus justo. Etiam ut venenatis odio. Donec egestas, felis in mattis sodales, magna justo hendrerit quam, ac bibendum leo libero sit amet erat. Cras iaculis iaculis viverra.<br/>
@@ -29,6 +24,6 @@
       </div>
     </div>
   </div>
-<script src="assets/enigme.js" charset="utf-8"></script>
+<script src="assets/js/enigme.js" charset="utf-8"></script>
 </body>
 </html>

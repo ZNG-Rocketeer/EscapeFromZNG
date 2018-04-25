@@ -3,7 +3,7 @@
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css">
 
 <body>
 
@@ -22,6 +22,6 @@
       </div>
     </div>
   </div>
-<script src="enigme.js" charset="utf-8"></script>
+<script src="assets/enigme.js" charset="utf-8"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 
 #header {
   color:#fff;
-  background-image: url(img/hack.gif);
+  background-image: url(assets/img/hack.gif);
   background-position: center;
   background-size: cover;
   background-origin: content-box;

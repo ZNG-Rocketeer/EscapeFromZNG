@@ -3,7 +3,7 @@
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/style.css">
 
 <body>
 
@@ -24,11 +24,11 @@
 	Donec cursus ante et dolor posuere pretium. Quisque hendrerit ante quis libero gravida pharetra. Fusce nec lobortis quam. Vestibulum sapien mi, aliquam vitae placerat ut, dignissim in sem. Praesent eu augue id ante convallis sodales sit amet quis massa. Fusce consequat felis eu augue laoreet luctus ac in nibh. Sed non nulla ac risus cursus pretium ut ut nisi. Vivamus et sollicitudin est, in faucibus justo. Etiam ut venenatis odio. Donec egestas, felis in mattis sodales, magna justo hendrerit quam, ac bibendum leo libero sit amet erat. Cras iaculis iaculis viverra.<br/>
 	Pellentesque ex nulla, varius id dapibus <a href="enigme_pass.php" class="lien_secret">id</a>, tincidunt vitae erat. Nulla sagittis suscipit arcu ac consectetur. Phasellus mollis dapibus scelerisque. Nullam dignissim elementum aliquam. Curabitur egestas a dolor ut tristique. Duis non magna ac ante dictum blandit sed vel libero. Donec tincidunt id leo in ultrices. Duis nec ligula sodales, ultricies velit sit amet, consectetur arcu.<br/>
 	Donec eleifend porta mauris, in tristique mauris elementum nec. In feugiat nisl ultricies tortor varius hendrerit. Cras eget tincidunt velit. Nunc sit amet lacus interdum, ultrices nulla et, imperdiet urna. Vestibulum semper dictum fringilla. Nulla tincidunt suscipit consectetur. Aenean sed justo erat. Nullam efficitur suscipit nisl vel gravida. Donec ullamcorper eros eget risus dapibus sodales. Aliquam erat volutpat. In vitae elit accumsan, scelerisque neque vitae, bibendum libero. Donec magna nulla, consectetur vel maximus quis, convallis sed turpis. Quisque accumsan lorem non erat commodo tincidunt. Vivamus nisi ante, venenatis id mauris quis, commodo consectetur eros.<br/>
-	Fusce vulputate eros non orci venenatis, sed tempor sem scelerisque. Donec faucibus non quam ac aliquet. Donec eget tempor justo, nec accumsan urna. Aliquam dictum enim ut erat mattis semper. Nullam nec consectetur elit. Ut vel elit non eros rhoncus vehicula. Quisque fermentum erat lorem, maximus ornare elit aliquam feugiat. 
+	Fusce vulputate eros non orci venenatis, sed tempor sem scelerisque. Donec faucibus non quam ac aliquet. Donec eget tempor justo, nec accumsan urna. Aliquam dictum enim ut erat mattis semper. Nullam nec consectetur elit. Ut vel elit non eros rhoncus vehicula. Quisque fermentum erat lorem, maximus ornare elit aliquam feugiat.
 	</p>
       </div>
     </div>
   </div>
-<script src="enigme.js" charset="utf-8"></script>
+<script src="assets/enigme.js" charset="utf-8"></script>
 </body>
 </html>

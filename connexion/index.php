@@ -38,7 +38,10 @@ session_start();
             ?>
  	</fieldset>
           </form>
-        </p>
+          <?php
+          include '../assets/php/pdo2.php'
+
+          ?>
       </div>
     </div>
 

@@ -178,7 +178,18 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   font-weight: bold;
   font-family:'Lato', Arial, sans-serif;
 }
+<<<<<<< HEAD
+.nav-profil:before{
+  background-image: url(../assets/img/default.png); 
+  background-color:#41a741;
+ border-color:1px solid black;
+width:20px;
+height:20px;
+padding:10px;
+}
+=======
 
+>>>>>>> 57e704c8687a615334a9ae610bad09c03e58b82e
 .zng-bar .zng-bar-item{
   padding:8px 16px;
   float:left;

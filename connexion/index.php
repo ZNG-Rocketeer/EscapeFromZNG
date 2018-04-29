@@ -19,6 +19,34 @@ session_start();
   <div class="zng-center zng-margin-top">
     <div class="zng-half">
       <div class="zng-card zng-form">
+<<<<<<< HEAD
+        <h2>Connexion</h2>
+
+        <?php if ($_GET['log']=="wrong") {
+          echo "connexion echouée";
+        } ?>
+        <form class="log" action="log.php" method="post">
+          Mail ou pseudo:
+          <input class="zng-text-form" type="text" name="login"><br>
+          Mot de passe:
+          <input class="zng-text-form" type="password" name="pass"> <br>
+          <input class="zng-btn-form" type="submit" value="Se connecter">
+          <label>
+            <input type="checkbox" > Se souvenir de moi <br>
+          </label>
+          <a href="#">Mot de passe oublié</a>
+          <?php
+          $_SESSION['znglogged']=yes;
+          $_SESSION['zngnom']=airone;
+          ?>
+          <?php
+          include '../assets/php/pdo.php'
+          inscription("airone","airpass","0","LC","ER","lce987@live.fr","1998-10-12");
+          echo "test";
+          ?>
+          <a href="signup.php">signup</a>
+        </form>
+=======
         <h2>Connexion</h2><br>
         <?php if ($_GET['log']=="wrong") {
           echo "<span class=\"important\">Connexion échouée</span>";

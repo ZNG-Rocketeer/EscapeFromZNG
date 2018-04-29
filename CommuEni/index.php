@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -6,7 +7,8 @@
   <link rel="stylesheet" href="../assets/css/master.css">
 </head>
 <body>
-  <?php include '../assets/php/gen_nav.php' ?>
+  <?php include '../assets/php/gen_nav.php';
+  ?>
   <div class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div class="zng-card" >
@@ -15,7 +17,6 @@
 
           <form class="zng-form" action="" method="post">
             Question <br>
-
             <textarea class="zng-textarea-form" name="name" rows="8" cols="80"></textarea>
             <br>
             Réponse <br>

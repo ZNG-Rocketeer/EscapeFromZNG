@@ -11,19 +11,21 @@ session_start();
 <body onload="fs(1);">
 
 
-  <?php include '../assets/php/gen_nav.php'  ?>
+  <?php include '../assets/php/gen_nav.php';
+
+  ?>
 
 
   <div class="zng-center zng-margin-top">
     <div class="zng-half">
       <div class="zng-card zng-form">
         <h2>Connexion</h2><br>
-          <?php if ($_GET['log']=="wrong") {
-            echo "connexion echouée";
-          } ?>
-          <form name ="log" class="log" action="log.php" method="post">
-	<fieldset>
-		Mail ou pseudo:
+        <?php if ($_GET['log']=="wrong") {
+          echo "<span class=\"important\">Connexion échouée</span>";
+        } ?>
+        <form name ="log" class="log" action="log.php" method="post">
+          <fieldset>
+            Mail ou pseudo:
             <input class="zng-text-form" type="text" name="login"><br>
             Mot de passe:
             <input class="zng-text-form" type="password" name="pass"> <br>
@@ -31,17 +33,11 @@ session_start();
             <label>
               <input type="checkbox" > Se souvenir de moi <br>
             </label>
-            <a href="#">Mot de passe oublié</a>
-            <?php
-            $_SESSION['znglogged']=yes;
-            $_SESSION['zngnom']=airone;
-            ?>
- 	</fieldset>
-          </form>
-          <?php
-          include '../assets/php/pdo2.php'
+            <a href="">Mot de passe oublié</a>
 
-          ?>
+          </fieldset>
+        </form>
+
       </div>
     </div>
 

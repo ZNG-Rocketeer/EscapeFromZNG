@@ -1,27 +1,58 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Connexion réussie</title>
+  <title>Connexion...</title>
   <link rel="stylesheet" href="../assets/css/master.css">
 </head>
 <body>
-  <?php include '../assets/php/gen_nav.php'
-  ?>
   <div id="card" class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div  class="zng-card" style="min-height:500px">
         <h2>Connexion en cours</h2>
-        <?php
-        if ($_SERVER["HTTP_REFERER"]."log.php" == "http://zngairone.tk".$_SERVER["PHP_SELF"]) {
-          if (isset($_POST['login']) && isset($_POST['pass'])) {
-            // SELECT id FROM zng_users WHERE pseudo AND pass =
-            // if non empty znglogged = yes zngid = id zngpseudo location href = index.php else location = connexion/index.php?log=wrong
-            echo $_POST["login"];
-            echo $_POST["pass"];
-          }
-        }
-        ?>
+        <p>
+          <?php
+          //if ($_SERVER["HTTP_REFERER"]."signup.php" == "http://192.168.0.24".$_SERVER["PHP_SELF"] || $_SERVER["HTTP_REFERER"]."signup.php" == "http://zngairone.tk".$_SERVER["PHP_SELF"] ) {
+            if (isset($_POST['znglogged'])) {
+              if ($_POST['znglogged']==yes) {
+                echo "<script type=\"text/javascript\">
+                document.location.href=\"/\"
+                </script>";
+              }
+            }
+            if (isset($_POST['login']) && isset($_POST['pass'])) {
+              include '../assets/php/pdo_log.php';
+
+              $log->execute(array($_POST['login'],md5($_POST['pass'])));
+              $res = $log->fetchAll();
+              if ($log->rowCount()!=0) {
+                $res = $res[0];
+                $_SESSION['zngid'] = $res["id"];
+                $_SESSION['zngpseudo'] = $res["pseudo"];
+                $_SESSION['znglogged'] = yes;
+                $_SESSION['zngmail'] = $res["email"];
+                $_SESSION['zngname'] = $res["prenom"];
+                echo "<script type=\"text/javascript\">
+                document.location.href=\"/\"
+                </script>";
+              }
+              else{
+                echo "Login Failed";
+                echo "<script type=\"text/javascript\">
+                document.location.href=\"index.php?log=wrong\"
+                </script>";
+              }
+
+            }
+          //}
+          //else {
+          //  echo "fail";
+          //}
+          ?>
+        </p>
       </div>
     </div>
   </div>

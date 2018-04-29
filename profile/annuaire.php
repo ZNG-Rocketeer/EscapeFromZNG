@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Annuaire</title>
+  <link rel="stylesheet" href="../assets/css/master.css">
 </head>
 <body>
-  <?php include '../assets/php/gen_nav.php'
+  <?php include '../assets/php/gen_nav.php';
+  
   // Barre de nav ?>
 
   <div id="card" class="zng-center zng-margin-top">
@@ -14,11 +16,12 @@
         <h2>Annuaire des utilisateurs</h2>
         <form action="profil.php" method="get">
           <label>
-            Nom Prenom <input type="text" name="name">
-          </label>
+            Nom Prenom <br> <input class="zng-text-form" type="text" name="name">
+          </label><br>
           <label>
-            Pseudo: <input type="text" name="pseudo">
+            Pseudo: <br> <input class="zng-text-form" type="text" name="pseudo">
           </label>
+          <button class="zng-btn-form" type="submit">Rechercher</button>
         </form>
       </div>
     </div>

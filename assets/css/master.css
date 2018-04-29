@@ -5,13 +5,14 @@ html{
 
 body{
   margin:0;
+
+  font-family:'Verdana', Arial, sans-serif;
 }
 
 nav{
   min-height: 40%;
   background-color: #41a741;
   margin: 0;
-
 }
 
 article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,summary{
@@ -19,9 +20,27 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   position:relative;
 }
 
+.zng-table td,.zng-table,.zng-table th{
+  border:1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  margin: 20px;
+}
+.zng-admin-supp{
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  background-image: url("../img/supp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
 #header {
   color:#fff;
-  background-image: url(../img/hack.gif);
+  background-image: url("../img/hack.gif");
   background-position: center;
   background-size: cover;
   background-origin: content-box;
@@ -44,7 +63,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 #header>.zng-center{
   text-align:center;
   font-weight: bold;
-  font-family:'Lato', Arial, sans-serif;
+  font-family:'Verdana', Arial, sans-serif;
 }
 .zng-center{
   text-align:center;
@@ -71,6 +90,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   text-align:center;
   cursor:pointer;
   white-space:nowrap;
+  font-weight: bold;
 }
 
 .zng-xlarge{
@@ -85,6 +105,10 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 
 .zng-xxxlarge{
   font-size:48px
+}
+.zng-black-btn{
+  color: #41a741;
+  background-color: black;
 }
 
 .zng-theme-l5 {color:#000 ; background-color:#e9fffd }
@@ -132,7 +156,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 
 .zng-solo{
   width: 90%;
-  margin: 5%;
+  margin: 5% 5% 0 5%;
 }
 .zng-half{
   float:left;
@@ -169,29 +193,33 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   padding-left:3%
 
 }
-.zng-card>p{
+
+.zng-card>p,.zng-card>form,.zng-card>div,.zng-card>table{
   margin:2%;
   font-weight: bold;
-  font-family:'Lato', Arial, sans-serif;
+  font-family:'Verdana', Arial, sans-serif;
 }
 .zng-card>div.p{
   font-weight: bold;
-  font-family:'Lato', Arial, sans-serif;
+  font-family:'Verdana', Arial, sans-serif;
 }
-<<<<<<< HEAD
-.nav-profil:before{
-  background-image: url(../assets/img/default.png); 
+.nav-profil-img{
+  background-image: url("../assets/img/default.png");
   background-color:#41a741;
- border-color:1px solid black;
-width:20px;
-height:20px;
-padding:10px;
+  border-color:1px solid black;
+  width:20px;
+  height:20px;
+  padding:10px;
 }
-=======
-
->>>>>>> 57e704c8687a615334a9ae610bad09c03e58b82e
+.zng-nav{
+  padding-left:  60px;
+}
+.zng-bar-item{
+  margin:0 10px;
+}
 .zng-bar .zng-bar-item{
   padding:8px 16px;
+
   float:left;
   width:auto;
   background-color: #41a741;
@@ -199,6 +227,26 @@ padding:10px;
   border:none;
   display:block;
   outline:0
+}
+.formsupp{
+  float: right;
+  width: 30%
+}
+#tablesupp th{
+  background-color: black;
+  color: #41a741
+}
+#tablesupp td{
+  background-color: #41a741;
+  color: black
+}
+#tablesupp{
+  width:90%;
+  text-align:center;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26),5px 5px 20px 0 rgba(0,0,0,0.32);
+}
+.suppcolumn{
+  width:10px;
 }
 
 .zng-text-form{
@@ -208,7 +256,7 @@ padding:10px;
   padding: 12px 0px 12px 20px;
   margin: 8px 0px 8px 0px;
   height: 25px;
-  width: 90.5%;
+  width: 96.3%;
   color: white;
 
   box-sizing: content-box;
@@ -235,7 +283,8 @@ figure.profil{
   height: 140px;
   color: black;
   float: right;
-  z-index: 2
+  z-index: 2;
+  cursor: pointer;
 }
 
 button.profil{
@@ -268,8 +317,8 @@ button.profil{
 
 .zng-btn-form,.zng-btn-form-half{
   background-color:black;
-  color: white;
-
+  color: #41a741;
+  font-weight: bold;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26),5px 5px 20px 0 rgba(0,0,0,0.32);
   border: 3px solid rgba(0,0,0,0.6);
   padding: 12px 0px;
@@ -279,6 +328,17 @@ button.profil{
   cursor: pointer;
   box-sizing: content-box;
 }
+
+.zng-hidden-panel{
+  display:none;
+  position: absolute;
+  left: 50%;
+  width: 50%;
+
+  z-index: 1;
+  border: 1px solid black;
+}
+
 .zng-btn-form-half{
   width: 48.5%;
   display: inline-block;
@@ -301,7 +361,9 @@ button.profil{
   width: 100%;
 }
 
-
+.zng-nav{
+  font-family:'Verdana', Arial, sans-serif;
+}
 
 .zng-form{
   height: 500px;

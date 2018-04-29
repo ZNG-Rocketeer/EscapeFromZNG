@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <title>EscapeFromZNG</title>
@@ -7,7 +8,7 @@
 
 <body>
 
-  <?php include '../assets/php/gen_nav.php'
+  <?php include '../assets/php/gen_nav.php';
    ?>
 
   <div class="zng-center zng-margin-top">
@@ -21,6 +22,7 @@
 	Donec eleifend porta mauris, in tristique mauris elementum nec. In feugiat nisl ultricies tortor varius hendrerit. Cras eget tincidunt velit. Nunc sit amet lacus interdum, ultrices nulla et, imperdiet urna. Vestibulum semper dictum fringilla. Nulla tincidunt suscipit consectetur. Aenean sed justo erat. Nullam efficitur suscipit nisl vel gravida. Donec ullamcorper eros eget risus dapibus sodales. Aliquam erat volutpat. In vitae elit accumsan, scelerisque neque vitae, bibendum libero. Donec magna nulla, consectetur vel maximus quis, convallis sed turpis. Quisque accumsan lorem non erat commodo tincidunt. Vivamus nisi ante, venenatis id mauris quis, commodo consectetur eros.<br/>
 	Fusce vulputate eros non orci venenatis, sed tempor sem scelerisque. Donec faucibus non quam ac aliquet. Donec eget tempor justo, nec accumsan urna. Aliquam dictum enim ut erat mattis semper. Nullam nec consectetur elit. Ut vel elit non eros rhoncus vehicula. Quisque fermentum erat lorem, maximus ornare elit aliquam feugiat.
 	</p>
+  <input id="rep" type="text" placeholder="Reponse">
       </div>
     </div>
   </div>

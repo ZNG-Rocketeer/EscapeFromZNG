@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,7 +9,7 @@
   <script src="../assets/js/tab.js" charset="utf-8"></script>
 </head>
 <body onload="resize_tab()">
-  <?php include '../assets/php/gen_nav.php'
+  <?php include '../assets/php/gen_nav.php';
    ?>
 
   <div class="zng-center zng-margin-top">

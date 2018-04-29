@@ -6,17 +6,23 @@ session_start()
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/assets/css/master.css">
-<script src="/assets/js/jeu.js" charset="utf-8"></script>
+<link rel="stylesheet" href="../assets/css/master.css">
+<script src="../assets/js/jeu.js" charset="utf-8"></script>
 <body>
   <!-- Header -->
   <header class="zng-container zng-theme zng-padding" id="header">
     <?php
     if ($_SESSION['znglogged']==yes) {
       echo "
-        <figure class=\"profil\">
-      <button type=\"button\" name=\"button\" class=\"profil\" onclick=\"document.location.href = 'profile';\"></button>
-      <figcaption>"."".$_SESSION['zngnom']."</figcaption>
+        <figure class=\"profil\" onclick=\"document.location.href = 'profile';\">
+      <button type=\"button\" name=\"button\" class=\"profil\" ></button>
+      <figcaption>"."".$_SESSION['zngpseudo']."</figcaption>
+      </figure>
+      ";
+      echo "
+        <figure style=\"visibility:hidden;float:left;\" class=\"profil\" onclick=\"document.location.href = 'profile';\">
+      <button type=\"button\" name=\"button\" class=\"profil\" ></button>
+      <figcaption>"."".$_SESSION['zngpseudo']."</figcaption>
       </figure>
       ";
     }
@@ -74,6 +80,7 @@ session_start()
           <!-- AddToAny END -->
         </div>
 
+        <p>Vous devez terminer les enigmes des créateurs avant de commencer celles de la communauté après cela et dès que celles ci seront prêtes le bouton ci-dessus vous emmènera vers ces dernières énigmes</p>
       </div>
     </div>
 
@@ -81,15 +88,6 @@ session_start()
       <div class="zng-card" >
         <h2>Enigmes de la communauté</h2>
         <p>
-          <a class="zng-padding-32" href="page.php">
-            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">
-              Exemple de page solo
-            </button>
-          </a><br>
-
-
-
-          <br/>
 
         </p>
       </div>

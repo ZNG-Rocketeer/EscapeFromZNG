@@ -19,7 +19,7 @@ function MotADeviner(evt)
 
   if(res==document.getElementById("mot").value)
   {
-    alert("BRAVO !!");
+    setTimeout(document.location.href='enigme_2_1.php',1000);
   }
 }
 

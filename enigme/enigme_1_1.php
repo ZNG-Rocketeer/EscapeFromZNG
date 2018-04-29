@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <title>EscapeFromZNG</title>
@@ -7,7 +8,7 @@
 
 <body>
 
-  <?php include '../assets/php/gen_nav.php'
+  <?php include '../assets/php/gen_nav.php';
    ?>
 
   <div class="zng-center zng-margin-top">

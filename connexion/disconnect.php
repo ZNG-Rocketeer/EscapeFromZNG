@@ -5,6 +5,7 @@
   unset($_SESSION['zngname']);
   unset($_SESSION['zngpseudo']);
   unset($_SESSION['zngmail']);
+  session_destroy();
  ?>
  <!DOCTYPE html>
  <html lang="fr" dir="ltr">

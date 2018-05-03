@@ -29,6 +29,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 .zng-admin-supp{
   width: 15px;
   height: 15px;
+  left:40%;
   background-color: red;
   background-image: url("../img/supp.png");
   background-size: cover;
@@ -198,6 +199,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   margin:2%;
   font-weight: bold;
   font-family:'Verdana', Arial, sans-serif;
+  padding-bottom: 2%;
 }
 .zng-card>div.p{
   font-weight: bold;
@@ -232,19 +234,24 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   float: right;
   width: 30%
 }
-#tablesupp th{
+#tablesupp th,#tableuser th{
   background-color: black;
   color: #41a741
 }
-#tablesupp td{
+#tablesupp td,#tableuser td{
   background-color: #41a741;
   color: black
 }
-#tablesupp{
+#tablesupp,#tableuser{
   width:90%;
   text-align:center;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26),5px 5px 20px 0 rgba(0,0,0,0.32);
 }
+
+#tableuser .tr-admin td{
+  background-color: #d4010a;
+}
+
 .suppcolumn{
   width:10px;
 }

@@ -21,7 +21,7 @@
           <?php
 
           if (isset($_POST['znglogged'])) {
-            if ($_POST['znglogged']==yes) {
+            if ($_SESSION['znglogged']==yes) {
               echo "<script type=\"text/javascript\">
               document.location.href=\"/\"
               </script>";
@@ -43,17 +43,23 @@
               echo " ".$_POST['prenom'];
               echo "<br>Mail: ".$_POST['mail'];
               echo "<br>Naissance: ".$_POST['date_naiss'];
-              $_SESSION['zngid'] = $_POST['login'];
-              $_SESSION['zngpseudo'] = $_POST['pseudo'];
+              $id->execute();
+              $res=$id->fetch();
+              $_SESSION['zngid'] = $res['id'];
+              $_SESSION['zngpseudo'] = $_POST['login'];
               $_SESSION['znglogged'] = yes;
               $_SESSION['zngmail'] = $_POST['email'];
               $_SESSION['zngname'] = $_POST['prenom'];
-              $userinfo="Pseudo: ".$_POST['login']."\n".$_POST['genre'].". ".$_POST['nom']." ".$_POST['prenom']."\nMail: ".$_POST['mail']."\nPass: ".$_POST['zngpass'];
-              $p->pushNote('erwanlc1@gmail.com', 'Nouvel Utilisateur sur EscapeFromZNG',$userinfo );
 
+              $userinfo="Pseudo: ".$_POST['login']."\n".$_POST['genre'].". ".$_POST['nom']." ".$_POST['prenom']."\nMail: ".$_POST['mail']."\nIP: ".$_SERVER['REMOTE_ADDR'];
+              $p->pushAdmin('Nouvel Utilisateur sur EscapeFromZNG',$userinfo );
+
+              //admin
               $sign->execute();
             }
           }
+
+
           else{
             echo "fail";
           }

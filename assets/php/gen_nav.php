@@ -1,4 +1,11 @@
 <?php
+
+// Pages accessibles en visiteurs
+$pages=array("/connexion/index.php",
+             "/connexion/signup.php",
+             "/connexion/mdpoublie.php",
+             "/connexion/log.php",
+             "/classement/index.php");
 session_start();
 echo "<!-- Header -->
 <nav class=\"zng-padding zng-nav\">
@@ -9,6 +16,14 @@ echo "<!-- Header -->
 ";
 if ($_SESSION['znglogged']==yes){
   echo "<button id=\"nav-profil\" class=\"zng-btn\" onclick=\"document.location.href='../profile/'\">${_SESSION['zngpseudo']}</button>";
+}
+else{
+
+  if (!in_array($_SERVER['PHP_SELF'],$pages)) {
+    echo "<script type=\"text/javascript\">
+    document.location.href=\"../\"
+    </script>";
+  }
 }
 echo "</nav>";
 // if ($_SESSION['znglogged'] == yes){

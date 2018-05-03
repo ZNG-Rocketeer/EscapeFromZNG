@@ -23,14 +23,9 @@
             </button>
           </a><br/>
 
-          <a class="zng-padding-32" href="../connexion">
+          <a class="zng-padding-32" href="connexion">
             <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
               Exemple de page inscription
-            </button>
-          </a><br/>
-          <a class="zng-padding-32" href="users.php">
-            <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" >
-              Users
             </button>
           </a><br/>
 

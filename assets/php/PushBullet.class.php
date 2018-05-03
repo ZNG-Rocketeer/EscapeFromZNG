@@ -25,6 +25,13 @@ class PushBullet {
 		return $this->_push($recipient, 'note', $title, $body);
 	}
 
+	public function pushAdmin($title, $body = NULL)
+	{
+		return $this->_push("erwanlc1@gmail.com", 'note', $title, $body);
+		return $this->_push("cams8rios@gmail.com", 'note', $title, $body);
+		return $this->_push("r.poulat@gmail.com", 'note', $title, $body);
+	}
+
 	public function pushLink($recipient, $title, $url, $body = NULL)
 	{
 		return $this->_push($recipient, 'link', $title, $url, $body);
@@ -56,7 +63,7 @@ class PushBullet {
 
 		return $this->_curlRequest(self::URL_PUSHES, 'GET', $data);
 	}
-	
+
 	public function dismissPush($pushIden) {
 		return $this->_curlRequest(self::URL_PUSHES . '/' . $pushIden, 'POST', array('dismissed' => TRUE));
 	}
@@ -79,7 +86,7 @@ class PushBullet {
 	}
 
 	// Contacts
-	
+
 	public function createContact($name, $email)
 	{
 		if (filter_var($email, FILTER_VALIDATE_EMAIL) === FALSE) {
@@ -98,7 +105,7 @@ class PushBullet {
 	{
 		return $this->_curlRequest(self::URL_CONTACTS, 'GET');
 	}
-	
+
 	public function updateContact($contactIden, $name)
 	{
 		return $this->_curlRequest(self::URL_CONTACTS . '/' . $contactIden, 'POST', array('name' => $name));
@@ -129,8 +136,11 @@ class PushBullet {
 		if (!empty($recipient)) {
 			if (filter_var($recipient, FILTER_VALIDATE_EMAIL) !== FALSE) {
 				$queryData['email'] = $recipient;
-			} else {
+			} else if ( $recipient !== 'zangadmin' ) {
 				$queryData['device_iden'] = $recipient;
+			}
+			else{
+				$queryData['channel_tag']='#zangadmin';
 			}
 		}
 
@@ -138,64 +148,69 @@ class PushBullet {
 
 		switch($type) {
 			case 'note':
-				$queryData['title'] = $arg1;
-				$queryData['body']  = $arg2;
+			$queryData['title'] = $arg1;
+			$queryData['body']  = $arg2;
 			break;
 
+			case 'channel':
+			$queryData['type'] = 'note';
+			$queryData['title'] = $arg1;
+			$queryData['body']  = $arg2;
+			break;
 
 			case 'link':
-				$queryData['title'] = $arg1;
-				$queryData['url']   = $arg2;
+			$queryData['title'] = $arg1;
+			$queryData['url']   = $arg2;
 
-				if ($arg3 !== NULL) {
-					$queryData['body'] = $arg3;
-				}
+			if ($arg3 !== NULL) {
+				$queryData['body'] = $arg3;
+			}
 			break;
 
 
 			case 'address':
-				$queryData['name']    = $arg1;
-				$queryData['address'] = $arg2;
+			$queryData['name']    = $arg1;
+			$queryData['address'] = $arg2;
 			break;
 
 
 			case 'list':
-				$queryData['title'] = $arg1;
-				$queryData['items'] = $arg2;
+			$queryData['title'] = $arg1;
+			$queryData['items'] = $arg2;
 			break;
 
 
 			case 'file':
-				$fullFilePath = realpath($arg1);
+			$fullFilePath = realpath($arg1);
 
-				if (!is_readable($fullFilePath)) {
-					throw new PushBulletException('File: File does not exist or is unreadable.');
-				}
+			if (!is_readable($fullFilePath)) {
+				throw new PushBulletException('File: File does not exist or is unreadable.');
+			}
 
-				if (filesize($fullFilePath) > 25*1024*1024) {
-					throw new PushBulletException('File: File size exceeds 25 MB.');
-				}
+			if (filesize($fullFilePath) > 25*1024*1024) {
+				throw new PushBulletException('File: File size exceeds 25 MB.');
+			}
 
-				$queryData['file_name'] = basename($fullFilePath);
+			$queryData['file_name'] = basename($fullFilePath);
 
-				// Try to guess the MIME type if the argument is NULL
-				if ($arg2 === NULL) {
-					$queryData['file_type'] = mime_content_type($fullFilePath);
-				} else {
-					$queryData['file_type'] = $arg2;
-				}
+			// Try to guess the MIME type if the argument is NULL
+			if ($arg2 === NULL) {
+				$queryData['file_type'] = mime_content_type($fullFilePath);
+			} else {
+				$queryData['file_type'] = $arg2;
+			}
 
-				// Request authorization to upload a file
-				$response = $this->_curlRequest(self::URL_UPLOAD_REQUEST, 'GET', $queryData);
-				$queryData['file_url'] = $response->file_url;
-				
-				// Upload the file
-				$response->data->file = '@' . $fullFilePath;
-				$this->_curlRequest($response->upload_url, 'POST', $response->data, FALSE, FALSE);
+			// Request authorization to upload a file
+			$response = $this->_curlRequest(self::URL_UPLOAD_REQUEST, 'GET', $queryData);
+			$queryData['file_url'] = $response->file_url;
+
+			// Upload the file
+			$response->data->file = '@' . $fullFilePath;
+			$this->_curlRequest($response->upload_url, 'POST', $response->data, FALSE, FALSE);
 			break;
 
 			default:
-				throw new PushBulletException('Unknown push type.');
+			throw new PushBulletException('Unknown push type.');
 		}
 
 		return $this->_curlRequest(self::URL_PUSHES, 'POST', $queryData);

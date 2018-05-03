@@ -63,7 +63,7 @@ session_start()
         -->
 
         <?php
-        if ($_SESSION['zngid']== 12 || $_SESSION['zngid']== 13) {
+        if ($_SESSION['zngid']== 12 || $_SESSION['zngid']== 13 || $_SESSION['zngid']== 14) {
           echo "Pages administration<br>";
           echo "<button class='zng-btn zng-black-btn' type=\"button\" name=\"button\" onclick=\"document.location.href='../admin/page.php'\" >Toutes les pages ;-)</button>
           <button class='zng-btn zng-black-btn' type=\"button\" name=\"button\" onclick=\"document.location.href='../admin/enigmes.php'\" >Toutes les enigmes ;-)</button>

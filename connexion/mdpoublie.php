@@ -28,6 +28,7 @@ session_start();
             $user = $res[0];
             $to = $user['mail'];
             $subject = "ZNG CONTACT";
+            echo $body;
           }
           else{
             echo "Vous n'êtes pas encore inscrit sur notre site";

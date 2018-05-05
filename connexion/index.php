@@ -33,7 +33,7 @@ session_start();
             <label>
               <input type="checkbox" > Se souvenir de moi <br>
             </label>
-            <a href="">Mot de passe oublié</a>
+            <a href="mdpoublie.php">Mot de passe oublié</a>
 
           </fieldset>
         </form>

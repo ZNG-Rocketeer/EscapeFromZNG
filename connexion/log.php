@@ -36,7 +36,7 @@ session_start();
                 $_SESSION['zngmail'] = $res["email"];
                 $_SESSION['zngname'] = $res["prenom"];
                 echo "<script type=\"text/javascript\">
-                document.location.href=\"/\"
+                document.location.href=\"../\"
                 </script>";
               }
               else{

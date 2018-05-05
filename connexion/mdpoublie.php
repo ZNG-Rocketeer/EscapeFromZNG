@@ -6,9 +6,11 @@ session_start();
 <head>
   <meta charset="utf-8">
   <title>Mot de passe oublié</title>
+  <link rel="stylesheet" href="../assets/css/master.css">
 </head>
 <body>
   <?php
+  include '../assets/php/gen_nav.php';
   include '../assets/php/pdo_users.php';
 
   if(isset($_GET['mail'])){
@@ -21,7 +23,6 @@ session_start();
       $to = $user['mail'];
       $subject = "ZNG CONTACT";
 
-      include '../assets/php/gmail.php'
     }
     else{
       echo "Vous n'êtes pas encore inscrit sur notre site";

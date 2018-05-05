@@ -17,7 +17,9 @@ session_start();
       <div  class="zng-card" style="min-height:500px">
         <h2>Bienvenue</h2>
         <?php
+        echo "test";
         include '../assets/php/pdo_users.php';
+        echo "test";
 
         if(isset($_GET['mail'])){
           // selection user by mail
@@ -33,6 +35,9 @@ session_start();
           else{
             echo "Vous n'êtes pas encore inscrit sur notre site";
           }
+        }else{
+          echo "else";
+
         }
         ?>
       </div>

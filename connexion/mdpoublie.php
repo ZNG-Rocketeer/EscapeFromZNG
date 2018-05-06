@@ -23,8 +23,6 @@ session_start();
         </form>
         <?php
         include '../assets/php/pdo_users.php';
-        include '../assets/php/gmail.php';
-        include '../assets/php/passgen.php';
         echo "teeeest";
 
         if(isset($_POST['mail'])){

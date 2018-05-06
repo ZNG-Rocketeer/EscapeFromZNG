@@ -40,11 +40,17 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 }
 
 #header {
-  color:#fff;
+  color: #fff;
   background-image: url("../img/hack.gif");
   background-position: center;
   background-size: cover;
   background-origin: content-box;
+  padding: 0.01em 60px;
+  box-shadow: 0px 0px 151px 64px black;
+
+  margin-top: -32px;
+  margin-bottom: -16px;
+  
 }
 .zng-theme {
   color:#fff;
@@ -281,13 +287,12 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   font-family: sans-serif;
 }
 
-figure.profil{
+figure.profil {
   text-align: center;
   background-color: white;
   border-radius: 15%;
   border: solid 2px black;
-  width: 130px;
-  height: 140px;
+  width: 13%;
   color: black;
   float: right;
   z-index: 2;

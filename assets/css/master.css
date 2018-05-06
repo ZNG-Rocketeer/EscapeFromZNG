@@ -71,10 +71,9 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   text-align:center;
   font-weight: bold;
   font-family:'Verdana', Arial, sans-serif;
+  margin-bottom: 16px;
 }
-.zng-center{
-  text-align:center;
-}
+
 
 .zng-right{
   text-align: right;
@@ -307,7 +306,6 @@ button.profil{
   height: 100px;
   color: white;
   font-size: 16px;
-
   background-color: darkgreen;
   background-image: url("../img/defaut.png");
   background-repeat:no-repeat;

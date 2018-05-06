@@ -297,7 +297,7 @@ figure.profil {
   float: right;
   z-index: 2;
   cursor: pointer;
-  margin:48px;
+  margin-top:48px;
 }
 
 button.profil{

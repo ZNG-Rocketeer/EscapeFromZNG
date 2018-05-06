@@ -19,7 +19,6 @@ $smtp = Mail::factory('smtp',
     'password' => $password));
 
 $mail = $smtp->send($to, $headers, $body);
-echo "test";
 if (PEAR::isError($mail)) {
   echo("<p>" . $mail->getMessage() . "</p>");
  } else {

@@ -15,7 +15,7 @@ $body = "<style>.mdp{text-align:center;background-color:grey;}</style>
   </tr>
 <tr>
 <td class='mdp'>
-MDP
+".$pass."
 </td>
 </tr>
 </tbody>

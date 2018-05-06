@@ -175,7 +175,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 
 
 
-.zng-margin-top{margin-top:30px}
+.zng-margin-top{margin-top:16px}
 
 .zng-card{
   text-align:left;
@@ -220,6 +220,8 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 }
 .zng-nav{
   padding-left:  60px;
+  font-family:'Verdana', Arial, sans-serif;
+  box-shadow: 0px -5px 24px 15px white;
 }
 .zng-bar-item{
   margin:0 10px;
@@ -372,9 +374,6 @@ button.profil{
   width: 100%;
 }
 
-.zng-nav{
-  font-family:'Verdana', Arial, sans-serif;
-}
 
 .zng-form{
   height: 500px;

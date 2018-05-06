@@ -23,6 +23,9 @@ session_start();
         </form>
         <?php
         include '../assets/php/pdo_users.php';
+        include '../assets/php/gmail.php';
+        include '../assets/php/passgen.php';
+
         if(isset($_POST['mail'])){
           $mail=$_POST['mail'];
           // selection user by mail
@@ -31,13 +34,12 @@ session_start();
           $res = $mdp->fetchAll();
           if ($mdp->rowCount()!=0) {
             $user = $res[0];
-            $to = $user['pseudo']."<".$mail.">";
-            $subject = "ZNG CONTACT";
+            $mail = $user['pseudo']."<".$mail.">";
+            $sujet = "ZNG CONTACT";
             $pass=randomPassword();
             echo $pass;
             $mdp_nouv->execute(array("erwan",$mail));
-            include '../assets/php/gen_mail.php';
-            include '../assets/php/gmail.php';
+            mail_mdp($mail,$user,$pass);
           }
           else{
             echo "Vous n'êtes pas encore inscrit sur notre site";

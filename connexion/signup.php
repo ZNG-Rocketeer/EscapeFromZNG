@@ -31,6 +31,8 @@
           if (isset($_POST['genre']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date_naiss']) && isset($_POST['login']) && isset($_POST['mail']) && isset($_POST['zngpass'])) {
             include '../assets/php/pb_co.php';
             include '../assets/php/pdo_sign.php';
+            include '../assets/php/gmail.php';
+
             $mail->execute();
             if($mail->rowCount()!=0){
               echo "Ce mail est déjà enregistré";
@@ -43,6 +45,8 @@
               echo " ".$_POST['prenom'];
               echo "<br>Mail: ".$_POST['mail'];
               echo "<br>Naissance: ".$_POST['date_naiss'];
+              $to=$_POST['pseudo']." <".$_POST['mail'].">";
+
               $id->execute();
               $res=$id->fetch();
               $_SESSION['zngid'] = $res['id'];
@@ -50,6 +54,9 @@
               $_SESSION['znglogged'] = yes;
               $_SESSION['zngmail'] = $_POST['email'];
               $_SESSION['zngname'] = $_POST['prenom'];
+              //SESSION pblogged
+              //SESSION pbtok
+              //SESSION avatar_link
 
               $userinfo="Pseudo: ".$_POST['login']."\n".$_POST['genre'].". ".$_POST['nom']." ".$_POST['prenom']."\nMail: ".$_POST['mail']."\nIP: ".$_SERVER['REMOTE_ADDR'];
               $p->pushAdmin('Nouvel Utilisateur sur EscapeFromZNG',$userinfo );

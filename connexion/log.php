@@ -29,6 +29,7 @@ session_start();
               $log->execute(array($_POST['login'],md5($_POST['pass'])));
               $res = $log->fetchAll();
               if ($log->rowCount()!=0) {
+              
                 $res = $res[0];
                 $_SESSION['zngid'] = $res["id"];
                 $_SESSION['zngpseudo'] = $res["pseudo"];

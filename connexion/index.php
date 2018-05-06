@@ -30,9 +30,7 @@ session_start();
             Mot de passe:
             <input class="zng-text-form" type="password" name="pass"> <br>
             <input class="zng-btn-form" type="submit" value="Se connecter">
-            <label>
-              <input type="checkbox" > Se souvenir de moi <br>
-            </label>
+            
             <a href="mdpoublie.php">Mot de passe oublié</a>
 
           </fieldset>

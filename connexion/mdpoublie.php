@@ -28,10 +28,12 @@ session_start();
 
         if(isset($_POST['mail'])){
           $mail=$_POST['mail'];
+          echo $mail;
           // selection user by mail
           $mdp->execute(array($mail));
           // gen mdp aleatoire ->
           $res = $mdp->fetchAll();
+          echo $mdp->rowCount();
           if ($mdp->rowCount()!=0) {
             $user = $res[0];
             $mail = $user['pseudo']."<".$mail.">";

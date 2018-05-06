@@ -45,7 +45,16 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   background-position: center;
   background-size: cover;
   background-origin: content-box;
+padding:0.01em 60px;
+/*box-shadow: inset -5px -5px 5px 0px white;*/
+box-shadow:  0px 0px 50px 15px black;
 }
+
+.zng-padding-header{
+  padding-top:8px;
+padding-bottom:19px;
+}
+
 .zng-theme {
   color:#fff;
   background-position: center;
@@ -133,7 +142,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 
 .zng-theme-action {color:#fff ; background-color:#004a43 }
 
-.zng-theme {color:#fff ; background-color:#009688 }
+.zng-theme {color:#fff; background-color:black; }
 .zng-text-theme {color:#009688 }
 .zng-border-theme {border-color:#009688 }
 

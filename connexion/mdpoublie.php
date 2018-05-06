@@ -25,6 +25,7 @@ session_start();
         include '../assets/php/pdo_users.php';
         include '../assets/php/gmail.php';
         include '../assets/php/passgen.php';
+        echo "teeeest";
 
         if(isset($_POST['mail'])){
           $mail=$_POST['mail'];

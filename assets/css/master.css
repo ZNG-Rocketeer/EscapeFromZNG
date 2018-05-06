@@ -50,13 +50,8 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 
   margin-top: -32px;
   margin-bottom: -16px;
-}
 
-.zng-padding-header{
-  padding-top:8px;
-padding-bottom:19px;
 }
-
 .zng-theme {
   color:#fff;
   background-position: center;
@@ -144,7 +139,7 @@ padding-bottom:19px;
 
 .zng-theme-action {color:#fff ; background-color:#004a43 }
 
-.zng-theme {color:#fff; background-color:black; }
+.zng-theme {color:#fff ; background-color:#009688 }
 .zng-text-theme {color:#009688 }
 .zng-border-theme {border-color:#009688 }
 
@@ -302,6 +297,7 @@ figure.profil {
   float: right;
   z-index: 2;
   cursor: pointer;
+  margin:48px;
 }
 
 button.profil{

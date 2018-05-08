@@ -15,7 +15,7 @@ echo "<!-- Header -->
 <a href=\"/connexion\" class=\"zng-bar-item zng-btn\">Inscription</a>
 ";
 print_r (parse_url($_SERVER['PHP_SELF']));
-}
+
 if ($_SESSION['znglogged']==yes){
   echo "<button id=\"nav-profil\" class=\"zng-btn\" onclick=\"document.location.href='../profile/'\">${_SESSION['zngpseudo']}</button>";
 }

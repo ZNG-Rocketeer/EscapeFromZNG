@@ -62,22 +62,10 @@ function displayWarning(msg) {
 function reponse(evt)
 {
   var cherche=document.getElementById("rep").value;
-  var res="Secret";
+  var resultat="Secret";
 
-  var code_user=evt.charCode;
-  var lettre_user=String.fromCharCode(code_user);
-
-  evt.preventDefault();
-  est_Majuscule(evt,code_user);
-
-  if(res[cherche.length]==lettre_user)
-  {
-    document.getElementById("rep").value=cherche+lettre_user;
-  }
-
-  if(res==document.getElementById("rep").value)
-  {
-    setTimeout(document.location.href='enigme_2_1.php',10000);
+  if(resultat==document.getElementById("rep").value){
+    setTimeout(document.location.href='enigme_3_1.php',10000);
   }
 }
 

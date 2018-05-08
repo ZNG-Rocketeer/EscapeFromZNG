@@ -2,10 +2,10 @@
 
 // Pages accessibles en visiteurs
 $pages=array("/connexion/index.php",
-             "/connexion/signup.php",
-             "/connexion/mdpoublie.php",
-             "/connexion/log.php",
-             "/classement/index.php");
+"/connexion/signup.php",
+"/connexion/mdpoublie.php",
+"/connexion/log.php",
+"/classement/index.php");
 session_start();
 echo "<!-- Header -->
 <nav class=\"zng-padding zng-nav\">
@@ -16,11 +16,11 @@ echo "<!-- Header -->
 ";
 
 if (substr($_SERVER['PHP_SELF'],0,15) == "/enigme/enigme_") {
-echo  "<form class=\"zng-hidden\" name=\"chronoForm\">";
-echo "<span class=\"zng-bar-item\" id=\"chronotime\">0:00:00:00</span>";
-echo  " <input type=\"button\" name=\"startstop\" value=\"start!\" onClick=\"chronoStart()\" />";
-echo  "  <input type=\"button\" name=\"reset\" value=\"reset!\" onClick=\"chronoReset()\" />";
-echo  "</form>";
+  echo  "<form class=\"zng-hidden\" name=\"chronoForm\">
+  <span class=\"zng-bar-item\" id=\"chronotime\">0:00:00:00</span>
+  <input type=\"button\" name=\"startstop\" value=\"start!\" onClick=\"chronoStart()\" />
+  <input type=\"button\" name=\"reset\" value=\"reset!\" onClick=\"chronoReset()\" />
+  </form>";
 }
 
 

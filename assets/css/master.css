@@ -49,7 +49,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   box-shadow: 0px 0px 151px 64px black;
 
   margin-top: -32px;
-  margin-bottom: -16px;
+  margin-bottom: 48px;
 
 }
 .zng-theme {
@@ -173,9 +173,11 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   padding:0 5% 0 2.5%;
 }
 
+.zng-margin-top>.zng-solo{
+  margin-top: -4%;
+}
 
-
-.zng-margin-top{margin-top:-48px}
+.zng-margin-top{margin-top:-40px}
 
 .zng-card{
   text-align:left;
@@ -227,16 +229,10 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 .zng-bar-item{
   margin:0 10px;
 }
-.zng-bar .zng-bar-item{
-  padding:8px 16px;
-
-  float:left;
+.zng-bar, .zng-bar-item{
   width:auto;
-  background-color: #41a741;
-  color: black;
-  border:none;
-  display:block;
-  outline:0
+  background-color: #218021;
+  box-shadow: 0px 0px 5px #000000cc;
 }
 .formsupp{
   float: right;

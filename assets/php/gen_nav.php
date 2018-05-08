@@ -14,7 +14,11 @@ echo "<!-- Header -->
 <a href=\"/classement\" class=\"zng-bar-item zng-btn\">Classement</a>
 <a href=\"/connexion\" class=\"zng-bar-item zng-btn\">Inscription</a>
 ";
-print_r (parse_url($_SERVER['PHP_SELF']));
+
+if (substr($_SERVER['PHP_SELF'],0,15) == "/enigme/enigme_") {
+  echo "str";
+}
+
 
 if ($_SESSION['znglogged']==yes){
   echo "<button id=\"nav-profil\" class=\"zng-btn\" onclick=\"document.location.href='../profile/'\">${_SESSION['zngpseudo']}</button>";

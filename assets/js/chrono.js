@@ -20,7 +20,7 @@ function chrono(){
 	if(msec < 10){
 		msec = "00" +msec
 	}
-	else if(msec < 100){
+	else if(msec < 100){ 0:00:00:00
 		msec = "0" +msec
 	}
 	document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec + ":" + msec

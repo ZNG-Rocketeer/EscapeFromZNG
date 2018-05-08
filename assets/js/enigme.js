@@ -65,8 +65,14 @@ function reponse(evt)
 {
   var cherche=document.getElementById("rep").value;
   var resultat="Secret";
-document.getElementById("chronotime").innerHTML=inputrep.value;
-  if(resultat==document.getElementById("rep").value){
+  
+  var code_user=evt.charCode;
+  var lettre_user=String.fromCharCode(code_user);
+
+  evt.preventDefault();
+  cherche=cherche+lettre_user;
+  document.getElementById("chronotime").innerHTML=inputrep.value;
+  if(resultat==cherche){
     document.location.href='enigme_3_1.php';
   }
 }

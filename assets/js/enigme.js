@@ -62,7 +62,7 @@ function displayWarning(msg) {
 function reponse(evt)
 {
   var cherche=document.getElementById("rep").value;
-  var res="lemotlepluschiantdelunivers";
+  var res="Secret";
 
   var code_user=evt.charCode;
   var lettre_user=String.fromCharCode(code_user);

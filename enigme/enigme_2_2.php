@@ -20,6 +20,9 @@
           document.location.href=\"enigme_2_2.php\"
           </script>";
         } ?>
+        <p>
+          <input id="rep" type="text" placeholder="Reponse">
+        </p>
         <p class="enigme">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet dapibus eros, non efficitur lectus. Morbi facilisis consectetur elit, eu tempus quam ultricies at. Donec sollicitudin ligula sit amet justo auctor, in dignissim lacus volutpat. In ante lectus, ornare quis malesuada at, pharetra sagittis diam. Quisque viverra auctor volutpat. Cras in ligula erat. Etiam iaculis rutrum elit, vitae placerat est fringilla ut. Nunc ornare tellus arcu, nec vehicula neque fermentum a.<br/>
           Donec cursus ante et dolor posuere pretium. Quisque hendrerit ante quis libero gravida pharetra. Fusce nec lobortis quam. Vestibulum sapien mi, aliquam vitae placerat ut, dignissim in sem. Praesent eu augue id ante convallis sodales sit amet quis massa. Fusce consequat felis eu augue laoreet luctus ac in nibh. Sed non nulla ac risus cursus pretium ut ut nisi. Vivamus et sollicitudin est, in faucibus justo. Etiam ut venenatis odio. Donec egestas, felis in mattis sodales, magna justo hendrerit quam, ac bibendum leo libero sit amet erat. Cras iaculis iaculis viverra.<br/>
@@ -27,9 +30,7 @@
           Donec eleifend porta mauris, in tristique mauris elementum nec. In feugiat nisl ultricies tortor varius hendrerit. Cras eget tincidunt velit. Nunc sit amet lacus interdum, ultrices nulla et, imperdiet urna. Vestibulum semper dictum fringilla. Nulla tincidunt suscipit consectetur. Aenean sed justo erat. Nullam efficitur suscipit nisl vel gravida. Donec ullamcorper eros eget risus dapibus sodales. Aliquam erat volutpat. In vitae elit accumsan, scelerisque neque vitae, bibendum libero. Donec magna nulla, consectetur vel maximus quis, convallis sed turpis. Quisque accumsan lorem non erat commodo tincidunt. Vivamus nisi ante, venenatis id mauris quis, commodo consectetur eros.<br/>
           Fusce vulputate eros non orci venenatis, sed tempor sem scelerisque. Donec faucibus non quam ac aliquet. Donec eget tempor justo, nec accumsan urna. Aliquam dictum enim ut erat mattis semper. Nullam nec consectetur elit. Ut vel elit non eros rhoncus vehicula. Quisque fermentum erat lorem, maximus ornare elit aliquam feugiat.
         </p>
-        <p>
-          <input id="rep" type="text" placeholder="Reponse">
-        </p>
+
       </div>
     </div>
   </div>

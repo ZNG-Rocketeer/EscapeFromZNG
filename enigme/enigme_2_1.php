@@ -26,6 +26,6 @@
       </div>
     </div>
   </div>
-<script src="assets/js/enigme.js" charset="utf-8"></script>
+<script src="../assets/js/enigme.js" charset="utf-8"></script>
 </body>
 </html>

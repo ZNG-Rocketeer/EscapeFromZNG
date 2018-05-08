@@ -15,7 +15,7 @@ session_start();
         <h2>Connexion en cours</h2>
         <p>
           <?php
-          //if ($_SERVER["HTTP_REFERER"]."signup.php" == "http://192.168.0.24".$_SERVER["PHP_SELF"] || $_SERVER["HTTP_REFERER"]."signup.php" == "http://zngairone.tk".$_SERVER["PHP_SELF"] ) {
+          //if()
             if (isset($_POST['znglogged'])) {
               if ($_POST['znglogged']==yes) {
                 echo "<script type=\"text/javascript\">
@@ -29,7 +29,7 @@ session_start();
               $log->execute(array($_POST['login'],md5($_POST['pass'])));
               $res = $log->fetchAll();
               if ($log->rowCount()!=0) {
-              
+
                 $res = $res[0];
                 $_SESSION['zngid'] = $res["id"];
                 $_SESSION['zngpseudo'] = $res["pseudo"];

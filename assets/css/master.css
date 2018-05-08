@@ -349,6 +349,11 @@ button.profil{
   border: 1px solid black;
 }
 
+.zng-hidden{
+  display: none;
+  
+}
+
 .zng-btn-form-half{
   width: 48.5%;
   display: inline-block;

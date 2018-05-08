@@ -25,7 +25,7 @@
             <?php include '../assets/php/pdo_init.php';
             include '../assets/php/admin.php';
 
-            $sel = $pdo->prepare("select zng_user.id AS id, zng_user.pseudo AS pseudo,ComAns.idEni AS idEni,ComAns.temps AS temps from zng_user join ComAns where (zng_user.id = ComAns.id)", array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+            $sel = $pdo->prepare("select zng_user.id AS id, zng_user.pseudo AS pseudo,ResEni.idEni AS idEni,ResEni.temps AS temps from zng_user join ResEni where (zng_user.id = ResEni.id)", array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
             $sel->execute();
             $res = $sel->fetchAll();
 

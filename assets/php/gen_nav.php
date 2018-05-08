@@ -16,8 +16,9 @@ echo "<!-- Header -->
 ";
 
 if (substr($_SERVER['PHP_SELF'],0,15) == "/enigme/enigme_") {
-  echo  "<form class=\"zng-hidden\" name=\"chronoForm\">
-  <span class=\"zng-bar-item\" id=\"chronotime\">0:00:00:00</span>
+
+  echo  "<span class=\"zng-bar-item\" id=\"chronotime\">0:00:00:00</span>
+  <form class=\"zng-hidden\" name=\"chronoForm\">
   <input type=\"button\" name=\"startstop\" value=\"start!\" onClick=\"chronoStart()\" />
   <input type=\"button\" name=\"reset\" value=\"reset!\" onClick=\"chronoReset()\" />
   </form>";

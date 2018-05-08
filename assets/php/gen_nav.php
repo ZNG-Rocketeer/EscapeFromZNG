@@ -16,7 +16,7 @@ echo "<!-- Header -->
 ";
 
 if (substr($_SERVER['PHP_SELF'],0,15) == "/enigme/enigme_") {
-  echo "str";
+  echo "<span class=\"zng-bar-item\" id=\"chronotime\">0:00:00:00</span>"
 }
 
 

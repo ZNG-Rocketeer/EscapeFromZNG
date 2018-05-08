@@ -21,11 +21,8 @@
               <input type="password" id="mot" maxlength="27" required="required"/>
             </label>
           </form>
-          <span id="chronotime">0:00:00:00</span>
-          <form name="chronoForm">
-            <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
-            <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
-          </form>
+
+          
         </div>
       </div>
     </div>

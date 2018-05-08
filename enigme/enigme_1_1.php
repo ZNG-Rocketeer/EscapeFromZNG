@@ -16,13 +16,11 @@
       <div class="zng-card" >
         <h2>Enigme 1</h2>
         <div class="container">
-          <form autocomplete="off">
+          <form >
             <label>Mot a deviner :
-              <input type="password" id="mot" maxlength="27" required="required"/>
+              <input autocomplete="off" type="password" id="mot" maxlength="27" required="required"/>
             </label>
           </form>
-
-          
         </div>
       </div>
     </div>

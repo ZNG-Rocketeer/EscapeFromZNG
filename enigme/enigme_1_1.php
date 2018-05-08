@@ -24,20 +24,21 @@
         </div>
       </div>
     </div>
+    <form name="f_chrono">
+      <label for="saisie">Entrez le temps voulu en minutes : </label>
+      <input type="text" name="saisie" style="text-align: right;" /><br />
+      <input type="button" name="btn_dem" id="btn_dem" value="Démarrer" onclick="IndiquerMinutes(f_chrono.saisie.value); DemarrerChrono();" />
+      <input type="button" name="btn_stop" id="btn_stop" value="Arreter !" onclick="ArreterChrono();" style="display: none;" />
+      <input type="button" name="btn_pause" id="btn_pause" value="Pause" onclick="PauseChrono();" style="display: none;" />
+    </form>
+    <p id="chrono"></p>
   </div>
   <form class="zng-hidden" action="index.php" method="post">
     <input type="number" name="idEni" value="11">
     <input type="number" name="temps">
     <input type="text" name="verif">
   </form>
-  <form name="f_chrono">
-    <label for="saisie">Entrez le temps voulu en minutes : </label>
-    <input type="text" name="saisie" style="text-align: right;" /><br />
-    <input type="button" name="btn_dem" id="btn_dem" value="Démarrer" onclick="IndiquerMinutes(f_chrono.saisie.value); DemarrerChrono();" />
-    <input type="button" name="btn_stop" id="btn_stop" value="Arreter !" onclick="ArreterChrono();" style="display: none;" />
-    <input type="button" name="btn_pause" id="btn_pause" value="Pause" onclick="PauseChrono();" style="display: none;" />
-  </form>
-  <p id="chrono"></p>
+
   <script src="../assets/js/enigme.js" charset="utf-8"></script>
 </body>
 </html>

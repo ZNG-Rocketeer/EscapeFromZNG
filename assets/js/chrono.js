@@ -1,83 +1,57 @@
-
-var secondes = 0;
-var timer;
-var pause = false;
-var text = "";
-
-function IndiquerMinutes(min)
-{
-  secondes = min * 60;
+var startTime = 0
+var start = 0
+var end = 0
+var diff = 0
+var timerID = 0
+function chrono(){
+	end = new Date()
+	diff = end - start
+	diff = new Date(diff)
+	var msec = diff.getMilliseconds()
+	var sec = diff.getSeconds()
+	var min = diff.getMinutes()
+	var hr = diff.getHours()-1
+	if (min < 10){
+		min = "0" + min
+	}
+	if (sec < 10){
+		sec = "0" + sec
+	}
+	if(msec < 10){
+		msec = "00" +msec
+	}
+	else if(msec < 100){
+		msec = "0" +msec
+	}
+	document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec + ":" + msec
+	timerID = setTimeout("chrono()", 10)
 }
-function Chrono()
-{
-  if (secondes > 0)
-  {
-    var minutes = Math.floor(secondes/60);
-    var heures = Math.floor(minutes/60);
-    secondes -= minutes * 60;
-    if (heures > 0)
-    {
-      minutes -= heures * 60;
-      if (minutes > 0)
-      {
-        text = "Il reste " + heures + ' h ' + minutes + ' min ' + secondes + ' sec';
-      }
-      else
-      {
-        text = "Il reste " + heures + ' h ' + secondes + ' sec';
-      }
-      minutes = minutes + (heures * 60);
-      secondes = secondes + (minutes * 60) - 1;
-
-    }
-    else if (minutes > 0)
-    {
-      text = "Il reste " + minutes + ' min ' + secondes + ' sec';
-      secondes = secondes + (minutes * 60) - 1;
-    }
-    else
-    {
-      text = "Il reste " + secondes + ' sec';
-      secondes = secondes + (minutes * 60) - 1;
-    }
-  }
-  else
-  {
-    clearInterval(timer);
-    text = "Le temps est écoulé";
-  }
-  document.getElementById('chrono').innerHTML = text;
+function chronoStart(){
+	document.chronoForm.startstop.value = "stop!"
+	document.chronoForm.startstop.onclick = chronoStop
+	document.chronoForm.reset.onclick = chronoReset
+	start = new Date()
+	chrono()
 }
-function DemarrerChrono()
-{
-  timer = setInterval('Chrono()', 1000);
-  document.getElementById('btn_dem').style.display = 'none';
-  document.getElementById('btn_stop').style.display = 'inline';
-  document.getElementById('btn_pause').style.display = 'inline';
-
+function chronoContinue(){
+	document.chronoForm.startstop.value = "stop!"
+	document.chronoForm.startstop.onclick = chronoStop
+	document.chronoForm.reset.onclick = chronoReset
+	start = new Date()-diff
+	start = new Date(start)
+	chrono()
 }
-function ArreterChrono()
-{
-  clearInterval(timer);
-  document.getElementById('btn_dem').style.display = 'inline';
-  document.getElementById('btn_stop').style.display = 'none';
-  document.getElementById('btn_pause').style.display = 'none';
+function chronoReset(){
+	document.getElementById("chronotime").innerHTML = "0:00:00:000"
+	start = new Date()
 }
-function PauseChrono()
-{
-  if (!pause)
-  {
-    pause = true;
-    clearInterval(timer);
-    text = '[EN PAUSE] ' + text;
-    document.getElementById('chrono').innerHTML = text;
-    document.getElementById('btn_stop').style.display = 'none';
-    document.getElementById('btn_pause').value = 'Reprendre';
-  }
-  else
-  {
-    pause = false;
-    DemarrerChrono();
-    document.getElementById('btn_pause').value = 'Pause';
-  }
+function chronoStopReset(){
+	document.getElementById("chronotime").innerHTML = "0:00:00:000"
+	document.chronoForm.startstop.onclick = chronoStart
+}
+function chronoStop(){
+	document.chronoForm.startstop.value = "start!"
+	document.chronoForm.startstop.onclick = chronoContinue
+	document.chronoForm.reset.onclick = chronoStopReset
+	clearTimeout(timerID)
 }

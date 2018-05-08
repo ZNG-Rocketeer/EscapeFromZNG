@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../assets/css/master.css">
 <script src="../assets/js/chrono.js" charset="utf-8"></script>
-<body>
+<body onload="chronoStart()">
 
   <?php include '../assets/php/gen_nav.php';
   ?>
@@ -21,14 +21,11 @@
               <input type="password" id="mot" maxlength="27" required="required"/>
             </label>
           </form>
-          <form name="f_chrono">
-            <label for="saisie">Entrez le temps voulu en minutes : </label>
-            <input type="text" name="saisie" style="text-align: right;" /><br />
-            <input type="button" name="btn_dem" id="btn_dem" value="Démarrer" onclick="IndiquerMinutes(f_chrono.saisie.value); DemarrerChrono();" />
-            <input type="button" name="btn_stop" id="btn_stop" value="Arreter !" onclick="ArreterChrono();" style="display: none;" />
-            <input type="button" name="btn_pause" id="btn_pause" value="Pause" onclick="PauseChrono();" style="display: none;" />
+          <span id="chronotime">0:00:00:00</span>
+          <form name="chronoForm">
+            <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
+            <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
           </form>
-          <p id="chrono"></p>
         </div>
       </div>
     </div>

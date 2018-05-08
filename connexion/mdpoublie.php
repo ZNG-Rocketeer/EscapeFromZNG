@@ -11,35 +11,36 @@ session_start();
 <body>
   <?php
   include '../assets/php/gen_nav.php';
-  echo "";
   ?>
   <div id="card" class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div  class="zng-card" style="min-height:500px">
         <h2>Bienvenue</h2>
         <form class="zng-form" action="" method="post">
-          <input type="text" name="mail">
-          <input type="submit" value="Envoyer">
+          <input class="zng-text-form" type="text" name="mail" placeholder="Votre Email"> <br>
+          <input class="zng-btn-form" type="submit" value="Envoyer">
         </form>
         <?php
         include '../assets/php/pdo_users.php';
-        echo "teeeest";
+        include '../assets/php/gmail.php';
+        include '../assets/php/passgen.php';
 
         if(isset($_POST['mail'])){
           $mail=$_POST['mail'];
-          echo $mail;
+
           // selection user by mail
           $mdp->execute(array($mail));
           // gen mdp aleatoire ->
           $res = $mdp->fetchAll();
-          echo $mdp->rowCount();
           if ($mdp->rowCount()!=0) {
             $user = $res[0];
             $mail = $user['pseudo']."<".$mail.">";
             $sujet = "ZNG CONTACT";
-            $pass=randomPassword();
             echo $pass;
-            $mdp_nouv->execute(array("erwan",$mail));
+            $mdp_nouv->bindParam(1,"erwan");
+            $mdp_nouv->bindParam(2,$mail);
+            $mdp_nouv->execute();
+            echo ",";
             mail_mdp($mail,$user,$pass);
           }
           else{

@@ -8,12 +8,7 @@ $sqlmdp = "SELECT pseudo,genre,nom,prenom FROM zng_user WHERE email = ? ";
 $mdp =  $pdo->prepare($sqlmdp,array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 
 
-$sqlmdp_nouv = "
-UPDATE table
-SET pass = md5( ? )
-FROM zng_user
-WHERE email = ?
- ";
-$mdp_nouv =  $pdo->prepare($sqlmdp_nouv,array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+$sqlmdp_nouv = " UPDATE zng_user SET pass = ?  WHERE email = ? ";
+$mdp_nouv = $pdo->prepare($sqlmdp_nouv,array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 
 ?>

@@ -70,6 +70,7 @@ function reponse(evt)
   var lettre_user=String.fromCharCode(code_user);
 
   evt.preventDefault();
+  if(lettre_user > 'a' && lettre_user < 'z')
   document.getElementById("rep").value=cherche+lettre_user;
 
   document.getElementById("chronotime").innerHTML=inputrep.value;

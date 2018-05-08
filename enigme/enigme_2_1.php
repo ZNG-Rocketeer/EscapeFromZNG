@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../assets/css/master.css">
-
-<body>
+<script src="../assets/js/chrono.js" charset="utf-8"></script>
+<body onload="chronoStart()">
 
   <?php include '../assets/php/gen_nav.php';
 

@@ -64,7 +64,7 @@ function displayWarning(msg) {
 function reponse(evt)
 {
   var cherche=document.getElementById("rep").value;
-  var resultat="Secret";
+  var resultat="Walle";
 
   var code_user=evt.charCode;
   var lettre_user=String.fromCharCode(code_user);
@@ -73,7 +73,6 @@ function reponse(evt)
   if(lettre_user > 'a' && lettre_user < 'z')
   document.getElementById("rep").value=cherche+lettre_user;
 
-  document.getElementById("chronotime").innerHTML=inputrep.value;
   if(resultat==cherche){
     document.location.href='enigme_3_1.php';
   }

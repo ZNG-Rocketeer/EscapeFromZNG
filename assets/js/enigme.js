@@ -67,7 +67,7 @@ function reponse(evt)
   var resultat="Secret";
 document.getElementById("chronotime").innerHTML=inputrep.value;
   if(resultat==document.getElementById("rep").value){
-    setTimeout(document.location.href='enigme_3_1.php',10000);
+    document.location.href='enigme_3_1.php';
   }
 }
 

@@ -11,7 +11,7 @@
 </head>
 <body onload="resize_tab(); chronoStart();">
   <?php include '../assets/php/gen_nav.php';
-   ?>
+  ?>
 
   <div class="zng-center zng-margin-top">
     <div class="zng-solo">
@@ -20,11 +20,15 @@
         <div class="1">
           <table id="main">
             <?php
-            for ($i=0; $i < 15; $i++) {
+            for ($i=0; $i < 19; $i++) {
               echo "<tr>";
-              for ($j=0; $j < 15; $j++) {
-                $a=($i+$j)%4;
-                echo "<td class=\"coul0\" id=\"".$i."a".$j."\" onclick=\"pic($i,$j)\"> </td>";
+              for ($j=0; $j < 19; $j++) {
+                if($i < 4){
+                  echo "<th></th>";
+                }
+                else{
+                  echo "<td class=\"coul0\" id=\"".$i."a".$j."\" onclick=\"pic($i,$j);col($j);lig($i);\"> </td>";
+                }
               }
               echo "</tr>
               ";

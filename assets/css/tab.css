@@ -80,7 +80,7 @@
   background-color: red;
 }
 .coul3,#coul3:not(:checked) + label:before,#coul3:checked + label:after{
-  background-color: #41a741;
+  background-color: #2c902c;
 }
 .coul4,#coul4:not(:checked) + label:before,#coul4:checked + label:after{
   background-color: yellow;

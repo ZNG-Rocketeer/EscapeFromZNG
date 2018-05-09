@@ -17,9 +17,7 @@ function radioval(){
     {
       // do whatever you want with the checked radio
       return(radios[i].value);
-
       // only one radio can be logically checked, don't check the rest
-
     }
   }
 }

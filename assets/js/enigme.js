@@ -24,7 +24,7 @@ function MotADeviner(evt)
 ////////////////////////////////////////////////////////////////////////////////
 var inputMot = document.getElementById('mot');
 if (inputMot) {
-inputMot.addEventListener('input', MotADeviner, false);
+inputMot.addEventListener('keypress', MotADeviner, false);
 }
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -69,9 +69,7 @@ function reponse(evt)
   var code_user=evt.charCode;
   var lettre_user=String.fromCharCode(code_user);
 
-  evt.preventDefault();
-  if(lettre_user > 'a' && lettre_user < 'z')
-  document.getElementById("rep").value=cherche+lettre_user;
+
 
   if(resultat==cherche){
     document.location.href='enigme_3_1.php';

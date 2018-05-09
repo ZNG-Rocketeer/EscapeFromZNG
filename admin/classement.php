@@ -22,7 +22,7 @@
           </form>
           <div style="width:67%;min-height:100%;overflow-y:scroll;">
 
-            <?php include '../assets/php/pdo_init.php';
+            <?php include '../assets/php/pdo/pdo_init.php';
             include '../assets/php/admin.php';
 
             $sel = $pdo->prepare("select zng_user.id AS id, zng_user.pseudo AS pseudo,ResEni.idEni AS idEni,ResEni.temps AS temps from zng_user join ResEni where (zng_user.id = ResEni.id)", array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));

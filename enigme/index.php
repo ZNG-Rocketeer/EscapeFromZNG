@@ -23,7 +23,7 @@
             $verif = $_POST['verif'];
 
             if ($temps + 1 == md5($verif)) {
-              include '../assets/php/pdo_enigmes.php';
+              include '../assets/php/pdo/pdo_enigmes.php';
               $eni_fin->execute(array($_SESSION['zngid'],$idEni,$temps));
             }
           }

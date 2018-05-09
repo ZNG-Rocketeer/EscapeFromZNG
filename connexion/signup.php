@@ -30,7 +30,7 @@
           //if ($_SERVER["HTTP_REFERER"]."signup.php" == "http://192.168.0.24".$_SERVER["PHP_SELF"] || $_SERVER["HTTP_REFERER"]."signup.php" == "http://zngairone.tk".$_SERVER["PHP_SELF"] ) {
           if (isset($_POST['genre']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date_naiss']) && isset($_POST['login']) && isset($_POST['mail']) && isset($_POST['zngpass'])) {
             include '../assets/php/pb_co.php';
-            include '../assets/php/pdo_sign.php';
+            include '../assets/php/pdo/pdo_sign.php';
             include '../assets/php/gmail.php';
 
             $mail->execute();

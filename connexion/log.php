@@ -24,7 +24,7 @@ session_start();
               }
             }
             if (isset($_POST['login']) && isset($_POST['pass'])) {
-              include '../assets/php/pdo_log.php';
+              include '../assets/php/pdo/pdo_log.php';
 
               $log->execute(array($_POST['login'],md5($_POST['pass'])));
               $res = $log->fetchAll();

@@ -17,7 +17,7 @@
         <p>
           <?php
           include '../assets/php/admin.php';
-          include '../assets/php/pdo_init.php';
+          include '../assets/php/pdo/pdo_init.php';
           $id=$pdo->prepare("SELECT zng_user.id,pseudo,nom,prenom,email,date_insc,idEni,temps FROM zng_user,ResEni WHERE zng_user.id = ResEni.id AND zng_user.id = ? AND idEni= ? ", array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
           $tps=$pdo->prepare("SELECT zng_user.id,pseudo,nom,prenom,email,date_insc,idEni,temps FROM zng_user,ResEni WHERE zng_user.id = ResEni.id AND temps < ? ", array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
           echo $_GET['id'];

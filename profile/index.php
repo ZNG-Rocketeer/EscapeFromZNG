@@ -24,7 +24,7 @@ session_start()
         <h2>Bienvenue<?php echo " ".$_SESSION["zngname"];?></h2>
         <p>
           <?php
-          include '../assets/php/pdo_users.php';
+          include '../assets/php/pdo/pdo_users.php';
           $sel->execute(array($_SESSION['zngid']));
           $res=$sel->fetch();
 

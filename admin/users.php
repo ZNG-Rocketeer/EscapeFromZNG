@@ -11,7 +11,7 @@
   <div id="card" class="zng-center zng-margin-top">
 
       <table id="tableuser" class="zng-table zng-solo">
-        <?php include '../assets/php/pdo_init.php';
+        <?php include '../assets/php/pdo/pdo_init.php';
 
         $sel = $pdo->prepare("select id,pseudo,nom,prenom,email,date_insc,date_naiss,ip from zng_user", array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
         $sel->execute();

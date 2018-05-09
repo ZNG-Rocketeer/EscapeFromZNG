@@ -21,7 +21,7 @@ session_start();
           <input class="zng-btn-form" type="submit" value="Envoyer">
         </form>
         <?php
-        include '../assets/php/pdo_users.php';
+        include '../assets/php/pdo/pdo_users.php';
         include '../assets/php/gmail.php';
         include '../assets/php/passgen.php';
 

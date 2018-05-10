@@ -18,7 +18,7 @@ session_start();
         <div class="zng-padding-16">
           <form class="" action="" method="post">
             <?php
-            include '../assets/php/pdo_users.php';
+            include '../assets/php/pdo/pdo_users.php';
             $sel->execute(array($_SESSION['zngid']));
             $res=$sel->fetch();
             echo '<input class="zng-text-form" type="text" name="nom" value="'.$res['nom']."\"><br>";

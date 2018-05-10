@@ -18,27 +18,20 @@ class picross
   }
 
   function addLine(array $line){
-    $n=count($line);
-    for ($i=0; $i < $n; $i++) {
-      array_push($this['lines'],$line[$i]);
-    }
+    array_push($this['lines'],$line);
   }
 
   function addCol(array $col){
-    $n=count($col);
-    for ($i=0; $i < $n; $i++) {
-      array_push($this['columns'],$col[$i]);
-    }
+    array_push($this['columns'],$col);
   }
 
   function echoFormRadio(){
     echo "<input type=\"radio\" id=\"coul0\" name=\"radio-group\" checked value=\"#000\">
     <label for=\"coul0\"></label>";
     for ($i=0; $i < $this['colors']['taille']; $i++) {
-
-    echo "<input type=\"radio\" id=\"coul$i\" name=\"radio-group\" checked value=\"".$this['colors'][$i]."\">
-    <label for=\"coul$i\"></label>";
-  }
+      echo "<input type=\"radio\" id=\"coul$i\" name=\"radio-group\" checked value=\"".$this['colors'][$i]."\">
+      <label for=\"coul$i\"></label>";
+    }
   }
 
   function loadFile($filename){
@@ -60,9 +53,9 @@ class picross
 
   function echoPicLine(int $line){
     echo "<tr>";
-    for ($i=0; $i < $this['color']['taille']; $i++) {
-      echo "<th id=\"l".$i."\" class=\"coul".$i."\">";
-      echo $this['line'][$i];
+    for ($i=0; $i < $this['colors']['taille']; $i++) {
+      echo "<th id=\"l".$i."\" class=\"ligne coul".$i."\">";
+      echo $this['line'][$line][$i];
       echo "</th>";
     }
     for ($i=0; $i < $this['columns']['taille']; $i++) {
@@ -73,7 +66,15 @@ class picross
   }
 
   function echoPicCol(){
-
+    for ($i=0; $i < $this['colors']['taille']; $i++) {
+      echo "<tr>";
+      for ($j=0; $j <$this['columns']['taille']; $j++) {
+        echo "<th id=\"c".$j."\" class=\"col coul".$j."\">";
+        echo $this['columns'][$j][$i];
+        echo "</th>"
+      }
+      echo "</tr>";
+    }
   }
 
 }

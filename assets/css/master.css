@@ -73,6 +73,9 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   font-family:'Verdana', Arial, sans-serif;
   margin-bottom: 16px;
 }
+.zng-center{
+    text-align:center;
+}
 
 
 .zng-right{
@@ -429,7 +432,7 @@ body{
 .label
 {
   width: 30px;
-  center;
+  /*A modifier*/center;
 }
 .rect-fsn{
   width: 20px;
@@ -445,4 +448,9 @@ body{
 #formeni41>input{
   margin:0 100px 5px 0;
   display: inline;
+}
+
+.label_tab
+{
+    margin:auto;
 }

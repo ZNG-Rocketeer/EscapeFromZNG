@@ -16,7 +16,8 @@
   <div class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div class="zng-card">
-        <h2>Enigme 3 : "Picross"</h2>
+        <h2>Enigme 3 : "Picross" <span id="Enisuiv" class="zng-hidden">2</span></h2>
+
         <div class="1">
           <table id="main">
             <?php
@@ -27,7 +28,7 @@
                   echo "<th></th>";
                 }
                 else{
-                  echo "<td class=\"coul0\" id=\"".$i."a".$j."\" onclick=\"pic($i,$j);col($j);lig($i);\"> </td>";
+                  echo "<td class=\"coul0\" id=\"".$i."a".$j."\" onclick=\"pic($i,$j);\"> </td>";
                 }
               }
               echo "</tr>

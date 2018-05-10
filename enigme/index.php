@@ -22,13 +22,46 @@
             $temps = $_POST['temps'];
             $verif = $_POST['verif'];
 
-            if ($temps + 1 == md5($verif)) {
+            if ($temps * 5.55 == $verif) {
               include '../assets/php/pdo/pdo_enigmes.php';
-              $eni_fin->execute(array($_SESSION['zngid'],$idEni,$temps));
+              $eni_sel->execute();
+              echo $temps . "s ";
+              if ($eni_sel->rowCount() > 0) {
+                $temps_prec = $eni_sel->fetch()['temps'];
+                if ( $temps_prec > $temps) {
+                  echo "Bravo tu t'es amélioré";
+                  $eni_up->execute();
+                }else{
+                  echo "Tu as déjà fais mieux: ". $temps_prec . "s" ;
+                }
+              }
+              else{
+                echo "Première performance";
+                $eni_ins->execute();
+              }
             }
+            else{
+              echo $temps;
+              echo " != ";
+              echo $verif;
+            }
+          }else{
+            echo isset($_POST['idEni']);
+            echo isset($_POST['temps']);
+            echo isset($_POST['verif']);
+          }
+
+          $eni_users->execute();
+          $res = $eni_users->execute();
+          $eni_noms->execute();
+          for ($i=0; $i < $eni_noms->rowCount(); $i++) {
+            $num=$i;
+            $eni_nom->execute();
+
           }
 
           ?>
+          <button type="button" name="button">Continuer</button>
         </p>
       </div>
     </div>

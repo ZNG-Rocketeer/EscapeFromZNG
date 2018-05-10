@@ -14,7 +14,7 @@
   <div class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div class="zng-card" >
-        <h2>Enigme 2 partie 2</h2>
+        <h2>Enigme 2 partie 2 <span id="Enisuiv" class="zng-hidden">0</span></h2>
         <?php if ($_GET['reponse']=="Secret") {
           echo "<script type=\"text/javascript\">
           document.location.href=\"enigme_2_2.php\"

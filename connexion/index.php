@@ -30,7 +30,7 @@ session_start();
             Mot de passe:
             <input class="zng-text-form" type="password" name="pass"> <br>
             <input class="zng-btn-form" type="submit" value="Se connecter">
-            
+
             <a href="mdpoublie.php">Mot de passe oublié</a>
 
           </fieldset>
@@ -59,7 +59,7 @@ session_start();
               Nom <input class="zng-text-form" type="text" name="nom" placeholder="Entrez votre Nom" required="required">
             </label>
             <label>
-              Prénom <input class="zng-text-form" type="text" name="prenom" placeholder="Entrez votre Prénom" required="required"/>
+              Prénom <input class="zng-text-form" type="text" name="prenom"  placeholder="Entrez votre Prénom" required="required"/>
             </label>
             <label>Date de naissance <input class="zng-text-form" type="date" name="date_naiss" required="required"> </label>
           </fieldset>
@@ -86,14 +86,14 @@ session_start();
         <span class="zng-data" id="fsn">1</span>
       </div>
       <div class="zng-footer">
-        <button id="btn1" type="button" class="zng-btn-form-half" onclick="fs(parseInt(document.getElementById('fsn').innerHTML)-1)" disabled > &#9664;</button>
-        <button id="btn2" type="button" class="zng-btn-form-half" onclick="fs(parseInt(document.getElementById('fsn').innerHTML)+1)"> &#9658;</button>
+        <button id="btn1" type="button" class="zng-btn-form-half" onclick="fs(parseInt(document.getElementById('fsn').innerHTML)-1);verif_inscription()" disabled >&#9664;</button>
+        <button id="btn2" type="button" class="zng-btn-form-half" onclick="fs(parseInt(document.getElementById('fsn').innerHTML)+1);verif_inscription()">&#9658;</button>
       </div>
       <div class="rect-fsn" id="rec1"></div>
       <div class="rect-fsn" id="rec2"></div>
       <div class="rect-fsn" id="rec3"></div>
     </div>
   </div>
-
+  <script src="../assets/js/inscription.js" charset="utf-8"></script>
 </body>
 </html>

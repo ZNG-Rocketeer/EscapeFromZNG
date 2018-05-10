@@ -17,14 +17,14 @@ function MotADeviner(evt)
 
   if(res==document.getElementById("mot").value)
   {
-    setTimeout(document.location.href='enigme_2_1.php',10000);
+    finEnigme(document.getElementById('Enisuiv').innerHTML);
   }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 var inputMot = document.getElementById('mot');
 if (inputMot) {
-inputMot.addEventListener('keypress', MotADeviner, false);
+  inputMot.addEventListener('keypress', MotADeviner, false);
 }
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -72,7 +72,7 @@ function reponse(evt)
 
 
   if(resultat==cherche){
-    document.location.href='enigme_3_1.php';
+    finEnigme(document.getElementById('Enisuiv').innerHTML);
   }
 }
 
@@ -82,3 +82,38 @@ if (inputrep) {
   inputrep.addEventListener('input', reponse, false);
 }
 ////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+function verif_label()
+{
+    var user_val1 = document.getElementById('i_2').value;
+    var rep_val1 = "2";
+    var user_val2 = document.getElementById('i_11').value;
+    var rep_val2 = "11";
+    var user_val3 =  document.getElementById('i_33').value;
+    var rep_val3 = "33"
+
+    if (user_val1==rep_val1 && user_val2==rep_val2 && user_val3==rep_val3 )
+    {
+	     alert("Bravo");
+    }
+    return true
+
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////   Fin enigme                  ///////////////////////////
+
+function finEnigme(eniSuiv){
+  chronoStop();
+  document.Enigme.verif.value=document.getElementById("chronosec").value*5.55;
+  if (eniSuiv == 0) {
+    document.Enigme.submit();
+  }
+  else{
+    var eni = 'enigme_' + document.Enigme.idEni.value + '_' + eniSuiv + '.php';
+    document.Enigme.action = eni;
+    document.Enigme.submit();
+  }
+}

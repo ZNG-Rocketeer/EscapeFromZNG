@@ -17,15 +17,13 @@ echo "<!-- Header -->
 
 if (substr($_SERVER['PHP_SELF'],0,15) == "/enigme/enigme_") {
 
-  echo  "<span class=\"zng-bar-item\" id=\"chronotime\">0:00:00:00</span>
-  <form class=\"zng-hidden\" name=\"chronoForm\">
-  <input type=\"button\" name=\"startstop\" value=\"start!\" onClick=\"chronoStart()\" />
-  <input type=\"button\" name=\"reset\" value=\"reset!\" onClick=\"chronoReset()\" />
-  </form>";
+  echo  "<span class=\"zng-bar-item zng-padding\" id=\"chronotime\">0:00:00:00</span>
+  <form class=\"zng-hidden\"name=\"Enigme\" action=\"index.php\" method=\"POST\">
+   <input type=\"text\" name=\"idEni\" value=\"".substr($_SERVER['PHP_SELF'],15,1)."\"> <input type=\"text\" name=\"temps\" id=\"chronosec\"><input type=\"text\" name=\"verif\"></form>";
 }
 
 
-if ($_SESSION['znglogged']==yes){
+if ($_SESSION['znglogged']=='yes'){
   echo "<button id=\"nav-profil\" class=\"zng-btn\" onclick=\"document.location.href='../profile/'\">${_SESSION['zngpseudo']}</button>";
 }
 else{

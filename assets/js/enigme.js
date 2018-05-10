@@ -69,6 +69,7 @@ function reponse(evt)
   var code_user=evt.charCode;
   var lettre_user=String.fromCharCode(code_user);
 
+  document.getElementById("rep").value=cherche+lettre_user;
 
 
   if(resultat==cherche){

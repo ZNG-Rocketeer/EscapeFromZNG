@@ -50,16 +50,15 @@
             echo isset($_POST['temps']);
             echo isset($_POST['verif']);
           }
-
+          
           $eni_users->execute();
-          $res = $eni_users->execute();
+          $res = $eni_users->fetchAll();
           $eni_noms->execute();
-          for ($i=0; $i < $eni_noms->rowCount(); $i++) {
-            $num=$i;
-            $eni_nom->execute();
-
-          }
-
+          print_r($res);
+          // for ($i=0; $i < $eni_noms->rowCount(); $i++) {
+          //   $num_eni=$eni_users->fetch()['idEni'];
+          //   $eni_nom->execute();
+          // }
           ?>
           <button type="button" name="button">Continuer</button>
         </p>

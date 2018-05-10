@@ -24,7 +24,8 @@ $eni_up->bindParam(3,$idEni);
 $eni_sel->bindParam(1,$_SESSION['zngid']);
 $eni_sel->bindParam(2,$idEni);
 
-$eni_sel->bindParam(1,$_SESSION['zngid']);
-$eni_nom->bindParam(1,$num);
+
+$eni_nom->bindParam(1,$num_eni);
+$eni_users->bindParam(1,$_SESSION['zngid']);
 
 ?>

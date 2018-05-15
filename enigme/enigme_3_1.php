@@ -24,7 +24,7 @@
             for ($i=0; $i < 19; $i++) {
               echo "<tr>";
               for ($j=0; $j < 19; $j++) {
-                if($i < 4){
+                if($i < 4 || $j<4){
                   echo "<th></th>";
                 }
                 else{
@@ -40,15 +40,15 @@
 
         <div class="2">
           <form action="#">
-            <input type="radio" id="coul0" name="radio-group" checked value="coul0">
+            <input type="radio" id="coul0" name="radio-group" checked value="#ffffff">
             <label for="coul0"></label>
-            <input type="radio" id="coul1" name="radio-group" value="coul1">
+            <input type="radio" id="coul1" name="radio-group" value="#000000">
             <label for="coul1"></label>
-            <input type="radio" id="coul2" name="radio-group" value="coul2">
+            <input type="radio" id="coul2" name="radio-group" value="#ff0000">
             <label for="coul2"></label>
-            <input type="radio" id="coul3" name="radio-group" value="coul3">
+            <input type="radio" id="coul3" name="radio-group" value="#2C902C">
             <label for="coul3"></label>
-            <input type="radio" id="coul4" name="radio-group" value="coul4">
+            <input type="radio" id="coul4" name="radio-group" value="#ffff00">
             <label for="coul4"></label>
           </form>
         </div>

@@ -4,11 +4,11 @@
 <title>Page d'admin des enigmes de base</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../assets/css/master.css">
-<script src="../assets/js/tailles.js" charset="utf-8"></script>
+<link rel="stylesheet" href="/assets/css/master.css">
+<script src="/assets/js/tailles.js" charset="utf-8"></script>
 
 <body onload="taille()" onresize="taille()">
-  <?php include '../assets/php/gen_nav.php';
+  <?php include $_SERVER['DOCUMENT_ROOT'].'/assets/php/gen_nav.php';
     ?>
     </nav>
   <div id="card" class="zng-center zng-margin-top">

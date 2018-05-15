@@ -4,28 +4,35 @@
 */
 class picross
 {
+  public $tailles;
+  public $lines;
+  public $columns;
+  public $colors;
 
-  function __construct(int $nlines,int $ncolumns,int $ncolors)
+
+  function __construct(int $nlines=0,int $ncolumns=0,int $ncolors=0)
   {
-    $lines = array('taille' => $nlines );
-    $columns = array('taille' => $ncolumns );
-    $couleurs = array('taille' => $ncolors );
-    return array('lines' => $lines,'columns' => $columns,'colors' => $colors );
+    $this->$tailles['lines'] =  $nlines ;
+    var_dump($this->$tailles);
+    $this->$tailles['columns'] = $ncolumns ;
+    $this->$tailles['colors'] = $ncolors ;
   }
 
-  function addColor(color $color){
-    array_push($this['colors']);
+  private function addColor($color){
+    echo "add";
+    var_dump($this);
+    $this['colors'][]=$color;
   }
 
-  function addLine(array $line){
+  private function addLine(array $line){
     array_push($this['lines'],$line);
   }
 
-  function addCol(array $col){
+  private function addCol(array $col){
     array_push($this['columns'],$col);
   }
 
-  function echoFormRadio(){
+  private function echoFormRadio(){
     echo "<input type=\"radio\" id=\"coul0\" name=\"radio-group\" checked value=\"#000\">
     <label for=\"coul0\"></label>";
     for ($i=0; $i < $this['colors']['taille']; $i++) {
@@ -34,24 +41,32 @@ class picross
     }
   }
 
-  function loadFile($filename){
-    $filepath = "/assets/picross/".$filename.".pic";
+  public function loadFile($filename){
+    $filepath = "../assets/picross/".$filename.".pic";
+
     $file = fopen($filepath,'r');
-    $nlines = atoi(fread($file,3));
-    $ncolumns = atoi(fread($file,3));
-    $ncolors = atoi(fread($file,1));
+    if ($file==false) {
+      die("erreur fichier".$filepath);
+    }
+    $nlines = fgets($file);
+    $ncolumns = fgets($file);
+    $ncolors = fgets($file);
+    echo $nlines.$ncolumns.$ncolors;
     for ($i=0; $i < $ncolors; $i++) {
-      addColor(fread($file,6));
+      $coul=fgets($file);
+      echo $coul;
+      $this->addColor($coul);
     }
     for ($i=0; $i < $nlines; $i++) {
-      addLine(explode(',',fread($file,$ncolors*3-1)));
+      $this->addLine(explode(',',fgets($file)));
     }
     for ($i=0; $i < $ncolumns; $i++) {
-      addColumn(explode(',',fread($file,$ncolors*3-1)));
+      $this->addColumn(explode(',',fgets($file)));
     }
+    fclose($file);
   }
 
-  function echoPicLine(int $line){
+  private function echoPicLine(int $line){
     echo "<tr>";
     for ($i=0; $i < $this['colors']['taille']; $i++) {
       echo "<th id=\"l".$i."\" class=\"ligne coul".$i."\">";
@@ -65,15 +80,22 @@ class picross
     echo "</tr>";
   }
 
-  function echoPicCol(){
+  private function echoPicCol(){
     for ($i=0; $i < $this['colors']['taille']; $i++) {
       echo "<tr>";
       for ($j=0; $j <$this['columns']['taille']; $j++) {
         echo "<th id=\"c".$j."\" class=\"col coul".$j."\">";
         echo $this['columns'][$j][$i];
-        echo "</th>"
+        echo "</th>";
       }
       echo "</tr>";
+    }
+  }
+
+  public function echoPicross(){
+    $this->echoPicCol();
+    for ($i=0; $i < $this['lines']['taille']; $i++) {
+      $this->echoPicLine($i);
     }
   }
 

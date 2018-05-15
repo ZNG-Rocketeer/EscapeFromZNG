@@ -5,6 +5,7 @@ function resize_tab(){
 function pic(x,y){
   var coor=x+"a"+y;
   var coul=radioval();
+
   document.getElementById(coor).style.backgroundColor=coul;
 }
 

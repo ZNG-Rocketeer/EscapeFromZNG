@@ -7,13 +7,13 @@ session_start()
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../assets/css/master.css">
-<script src="../assets/js/jeu.js" charset="utf-8"></script>
+<link rel="stylesheet" href="/assets/css/master.css">
+<script src="/assets/js/jeu.js" charset="utf-8"></script>
 <body>
   <!-- Header -->
   <header class="zng-container zng-theme zng-padding" id="header">
     <?php
-    if ($_SESSION['znglogged']==yes) {
+    if ($_SESSION['znglogged']=="yes") {
       echo "
       <figure class=\"profil\" onclick=\"document.location.href = 'profile';\">
       <button type=\"button\" name=\"button\" class=\"profil\" ></button>
@@ -33,7 +33,7 @@ session_start()
       <h1 class="zng-xxxlarge">EscapeFromZNG</h1>
       <div class="zng-padding-header">
         <button id="btn" class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="play()" style= "font-weight:900"><?php
-        if ($_SESSION['znglogged']==yes) {
+        if ($_SESSION['znglogged']=="yes") {
           echo "Jouez Maintenant";
         }else{
           echo "Se connecter";
@@ -84,7 +84,13 @@ session_start()
       <div class="zng-card" >
         <h2>Enigmes de la communauté</h2>
         <p>
-
+	<a href="CommuEni/creer_enigme_commu.php">
+	<button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal">Créer Enigme</button>
+	</a>
+	<br/>
+	<a href="CommuEni/index.php">
+	<button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal">Jouer</button>
+	</a>
 
         </p>
       </div>

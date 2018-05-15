@@ -4,7 +4,7 @@
   $verif = $_POST['verif'];
 
   if ($temps * 5.55 == $verif) {
-    include '../assets/php/pdo/pdo_enigmes.php';
+    include '$_SERVER['DOCUMENT_ROOT']/assets/php/pdo/pdo_enigmes.php';
     $eni_fin->execute(array($_SESSION['zngid'],$idEni,$temps));
     echo $temps;
     echo $idEni;

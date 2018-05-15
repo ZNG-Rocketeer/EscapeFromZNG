@@ -1,7 +1,7 @@
-html{
-  -ms-text-size-adjust:100%;
+/* html{
+  -ms-text-size-adjust:50%;
   -webkit-text-size-adjust:100%
-}
+} */
 
 body{
   margin:0;
@@ -26,6 +26,12 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   padding: 10px;
   margin: 20px;
 }
+
+.coupables{
+  padding:5px;
+  margin:10px;
+}
+
 .zng-admin-supp{
   width: 15px;
   height: 15px;
@@ -52,6 +58,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   margin-bottom: 48px;
 
 }
+/* TODO */
 .zng-theme {
   color:#fff;
   background-position: center;
@@ -162,7 +169,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 .zng-disabled,.zng-btn:disabled,.zng-button:disabled{cursor:not-allowed;opacity:0.3}
 .zng-disabled *,:disabled *{pointer-events:none}
 .zng-btn.zng-disabled:hover,.zng-btn:disabled:hover{box-shadow:none}
-
+/* TODO */
 .zng-solo{
   width: 90%;
   margin: 5% 5% 0 5%;
@@ -216,7 +223,7 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   font-family:'Verdana', Arial, sans-serif;
 }
 .nav-profil-img{
-  background-image: url("../assets/img/default.png");
+  background-image: url("/assets/img/default.png");
   background-color:#41a741;
   border-color:1px solid black;
   width:20px;
@@ -256,9 +263,11 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 }
 
 #tableuser .tr-admin td{
-  background-color: #d4010a;
+  background-color: #b15695;
 }
-
+#tableuser .tr-vip td{
+  background-color: #dcc061;
+}
 .suppcolumn{
   width:10px;
 }
@@ -269,12 +278,25 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   border: 3px solid rgba(0,0,0,0.6);
   padding: 12px 0px 12px 20px;
   margin: 8px 0px 8px 0px;
-  height: 25px;
+  height: 5%;
   width: 96.3%;
   color: white;
 
   box-sizing: content-box;
 }
+
+.zng-textarea-form
+{
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26),5px 5px 20px 0 rgba(0,0,0,0.32);
+    border: 3px solid rgba(0,0,0,0.6);
+    padding: 12px 0px 12px 20px;
+    margin: 8px 0px 8px 0px;
+    height: 15%;
+    width: 96.3%;
+    color: white;
+}
+
 .share{
   cursor:pointer;
   color: green;
@@ -354,7 +376,7 @@ button.profil{
 
 .zng-hidden{
   display: none;
-  
+
 }
 
 .zng-btn-form-half{

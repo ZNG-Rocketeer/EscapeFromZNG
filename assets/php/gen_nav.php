@@ -16,15 +16,16 @@ echo "<!-- Header -->
 ";
 
 if (substr($_SERVER['PHP_SELF'],0,15) == "/enigme/enigme_") {
-
   echo  "<span class=\"zng-bar-item zng-padding\" id=\"chronotime\">0:00:00:00</span>
-  <form class=\"zng-hidden\"name=\"Enigme\" action=\"index.php\" method=\"POST\">
-   <input type=\"text\" name=\"idEni\" value=\"".substr($_SERVER['PHP_SELF'],15,1)."\"> <input type=\"text\" name=\"temps\" id=\"chronosec\"><input type=\"text\" name=\"verif\"></form>";
+  <form class=\"zng-hidden\" name=\"Enigme\" action=\"index.php\" method=\"POST\">
+   <input type=\"text\" name=\"idEni\" value=\"".substr($_SERVER['PHP_SELF'],15,1)."\">
+   <input type=\"text\" name=\"temps\" id=\"chronosec\"><input type=\"text\" name=\"verif\">
+   </form>
+   ";
 }
 
-
 if ($_SESSION['znglogged']=='yes'){
-  echo "<button id=\"nav-profil\" class=\"zng-btn\" onclick=\"document.location.href='../profile/'\">${_SESSION['zngpseudo']}</button>";
+  echo "<a href=\"/profile/\" ><button id=\"nav-profil\" class=\"zng-btn\">${_SESSION['zngpseudo']}</button></a>";
 }
 else{
 
@@ -35,18 +36,6 @@ else{
   }
 }
 echo "</nav>";
-// if ($_SESSION['znglogged'] == yes){
-//   echo $_SESSION['pseudo'];
-// }
-// else{
-//   echo "Sign up / Login"
-// }
 
-//if ($_SESSION['znglogged']==yes){
-//echo "<button class=\"nav-profil\">$_SESSION['zngnom']</button>
-// ";
-//echo "</nav>";
 
-//<a class="pushbullet-subscribe-widget" data-channel="ZNGad" data-widget="button" data-size="small"></a>
-//<script type="text/javascript">(function(){var a=document.createElement('script');a.type='text/javascript';a.async=true;a.src='https://widget.pushbullet.com/embed.js';var b=document.getElementsByTagName('script')[0];b.parentNode.insertBefore(a,b);})();</script>
 ?>

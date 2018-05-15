@@ -28,8 +28,8 @@ class PushBullet {
 	public function pushAdmin($title, $body = NULL)
 	{
 		return $this->_push("erwanlc1@gmail.com", 'note', $title, $body);
-		return $this->_push("cams8rios@gmail.com", 'note', $title, $body);
-		return $this->_push("r.poulat@gmail.com", 'note', $title, $body);
+		//return $this->_push("cams8rios@gmail.com", 'note', $title, $body);
+		//return $this->_push("r.poulat@gmail.com", 'note', $title, $body);
 	}
 
 	public function pushLink($recipient, $title, $url, $body = NULL)

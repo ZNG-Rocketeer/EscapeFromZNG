@@ -6,6 +6,6 @@
   <title>Admin Commu</title>
 </head>
 <body>
-  <h1>Page d'admin des enigmes de la commu</h1>
+  <h1>Page d \'admin des enigmes de la commu</h1>
 </body>
 </html>

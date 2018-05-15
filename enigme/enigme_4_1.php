@@ -4,18 +4,18 @@
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../assets/css/master.css">
-<script src="../assets/js/chrono.js" charset="utf-8"></script>
+<link rel="stylesheet" href="/assets/css/master.css">
+<script src="/assets/js/chrono.js" charset="utf-8"></script>
 <body onload="chronoStart()">
 
-  <?php include '../assets/php/gen_nav.php';
+  <?php include $_SERVER['DOCUMENT_ROOT'].'/assets/php/gen_nav.php';
   ?>
 
   <div class="zng-center zng-margin-top">
     <div class="zng-solo">
       <div class="zng-card zng-center" >
         <h2>Enigme 4 <span id="Enisuiv" class="zng-hidden">0</span></h2>
-        <form action="#" method="post" id="formeni41">
+      <div class="zng-center">
           <table class="label_tab">
             <tr>
               <td> <label for="i_38">1) 19 + 19 : </label></td>
@@ -36,7 +36,7 @@
             <tr>
               <td> <label for="i_33">3) (∛125)+(20-22) : </label> </td>
               <td> <input type="text" maxlength="3" id="i_3" class="label" required="required"/> </td>
-              <td> <label for="i_11">18) 1 x 11 : </label> </td>
+              <td> <label for="i_11">18) √1024 - 21 : </label> </td>
               <td> <input type="text" maxlength="3" id="i_18" class="label" required="required"/> </td>
               <td> <label for="i_5">33) ∛125 : </label> </td>
               <td> <input type="text" maxlength="3" id="i_33" class="label" required="required"/> </td>
@@ -50,7 +50,7 @@
               <td> <input type="text" maxlength="3" id="i_34" class="label" required="required"/> </td>
             </tr>
             <tr>
-              <td> <label for="i_17">5) (28+12)-(30-7) : </label> </td>
+              <td> <label for="i_17">5) 1 x 17 : </label> </td>
               <td> <input type="text" maxlength="3" id="i_5" class="label" required="required"/> </td>
               <td> <label for="i_3">20) √9 : </label> </td>
               <td> <input type="text" maxlength="3" id="i_20" class="label" required="required"/> </td>
@@ -60,7 +60,7 @@
             <tr>
             <td> <label for="i_10">6) log(10000000000) : </label> </td>
             <td> <input type="text" maxlength="3" id="i_6" class="label" required="required"/> </td>
-            <td> <label for="i_32">21) √1024 : </label> </td>
+            <td> <label for="i_32">21) 35 - 3 : </label> </td>
             <td> <input type="text" maxlength="3" id="i_21" class="label" required="required"/> </td>
             <td> <label for="i_30">36) 5 x 6 : </label> </td>
             <td> <input type="text" maxlength="3" id="i_36" class="label" required="required"/> </td>
@@ -141,10 +141,10 @@
               <td colspan="6"> <button class="zng-btn-form" onclick="verif_label()"> Valider </button> </td>
             </tr>
           </table>
-        </form>
+	  </div>
       </div>
     </div>
   </div>
-  <script src="../assets/js/enigme.js" charset="utf-8"></script>
+  <script src="/assets/js/enigme.js" charset="utf-8"></script>
 </body>
 </html>

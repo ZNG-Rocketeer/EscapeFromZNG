@@ -1,9 +1,17 @@
 #main td{
-  padding:15px;
+  padding:10px;
   cursor: pointer;
   width: 5px;
   height: 5px;
   border: 1px dashed black;
+}
+
+#main th{
+  padding:10px;
+  width: 5px;
+  height: 5px;
+  border: 1px dashed black;
+  background-color: grey;
 }
 
 #main{

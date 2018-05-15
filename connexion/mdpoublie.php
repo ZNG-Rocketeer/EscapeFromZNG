@@ -6,11 +6,11 @@ session_start();
 <head>
   <meta charset="utf-8">
   <title>Mot de passe oublié</title>
-  <link rel="stylesheet" href="../assets/css/master.css">
+  <link rel="stylesheet" href="/assets/css/master.css">
 </head>
 <body>
   <?php
-  include '../assets/php/gen_nav.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/assets/php/gen_nav.php';
   ?>
   <div id="card" class="zng-center zng-margin-top">
     <div class="zng-solo">
@@ -21,33 +21,34 @@ session_start();
           <input class="zng-btn-form" type="submit" value="Envoyer">
         </form>
         <?php
-        include '../assets/php/pdo/pdo_users.php';
-        include '../assets/php/gmail.php';
-        include '../assets/php/passgen.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/assets/php/pdo/pdo_users.php';
+        
+        include $_SERVER['DOCUMENT_ROOT'].'/assets/php/passgen.php';
+
 
         if(isset($_POST['mail'])){
           $mail=$_POST['mail'];
-
+          
           // selection user by mail
           $mdp->execute(array($mail));
-          // gen mdp aleatoire ->
+          
           $res = $mdp->fetchAll();
+          echo $res[0]['pseudo'];
           if ($mdp->rowCount()!=0) {
             $user = $res[0];
-            $mail = $user['pseudo']."<".$mail.">";
             $sujet = "ZNG CONTACT";
-            echo $pass;
-            $mdp_nouv->bindParam(1,"erwan");
-            $mdp_nouv->bindParam(2,$mail);
+            $random=new Pass;
+            $pass=$random->randomPassword();
+            $passmail=$pass;
+            $pass=md5($pass);
+            // Nouveau mot de passe dans table zng_user + mail
             $mdp_nouv->execute();
-            echo ",";
-            mail_mdp($mail,$user,$pass);
+            include '../assets/php/gmail_mdp.php';
+            echo "";
           }
           else{
             echo "Vous n'êtes pas encore inscrit sur notre site";
           }
-        }else{
-          echo "else";
         }
         ?>
       </div>

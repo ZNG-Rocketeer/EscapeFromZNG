@@ -66,11 +66,6 @@ function reponse(evt)
   var cherche=document.getElementById("rep").value;
   var resultat="Walle";
 
-  var code_user=evt.charCode;
-  var lettre_user=String.fromCharCode(code_user);
-
-  document.getElementById("rep").value=cherche+lettre_user;
-
 
   if(resultat==cherche){
     finEnigme(document.getElementById('Enisuiv').innerHTML);
@@ -89,21 +84,39 @@ function verif_label()
 {
     var user_val1 = document.getElementById('i_2').value;
     var rep_val1 = "2";
-    var user_val2 = document.getElementById('i_11').value;
-    var rep_val2 = "11";
-    var user_val3 =  document.getElementById('i_33').value;
-    var rep_val3 = "33"
+    var user_val2 = document.getElementById('i_17').value;
+    var rep_val2 = "17";
+    var user_val3 =  document.getElementById('i_32').value;
+    var rep_val3 = "32"
 
     if (user_val1==rep_val1 && user_val2==rep_val2 && user_val3==rep_val3 )
     {
-	     alert("Bravo");
+	finEnigme(document.getElementById('Enisuiv').innerHTML);
     }
     return true
 
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+function eni32(){
+  var cherche=document.getElementById("eni3_2").value;
+  var resultat="metare";
 
+  var code_user=evt.charCode;
+  var lettre_user=String.fromCharCode(code_user);
+
+  document.getElementById("eni3_2").value=cherche+lettre_user;
+
+
+  if(resultat==cherche){
+    finEnigme(document.getElementById('Enisuiv').innerHTML);
+  }
+}
+
+var inputeni32 = document.getElementById('eni3_2');
+if (inputeni32) {
+  inputrep.addEventListener('input', eni32, false);
+}
 //////////////////////   Fin enigme                  ///////////////////////////
 
 function finEnigme(eniSuiv){

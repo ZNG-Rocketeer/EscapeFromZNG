@@ -4,11 +4,11 @@
 <title>EscapeFromZNG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../assets/css/master.css">
-<script src="../assets/js/chrono.js" charset="utf-8"></script>
+<link rel="stylesheet" href="/assets/css/master.css">
+<script src="/assets/js/chrono.js" charset="utf-8"></script>
 <body onload="chronoStart()">
 
-  <?php include '../assets/php/gen_nav.php';
+  <?php include $_SERVER['DOCUMENT_ROOT'].'/assets/php/gen_nav.php';
   ?>
 
   <div class="zng-center zng-margin-top">
@@ -21,7 +21,7 @@
           </script>";
         } ?>
         <p>
-          <input id="rep" type="text" placeholder="Reponse">
+          <input id="rep" type="text" autofocus placeholder="Reponse">
         </p>
         <p class="enigme">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet dapibus eros, non efficitur lectus. Morbi facilisis consectetur elit, eu tempus quam ultricies at. Donec sollicitudin ligula sit amet justo auctor, in dignissim lacus volutpat. In ante lectus, ornare quis malesuada at, pharetra sagittis diam. Quisque viverra auctor volutpat. Cras in ligula erat. Etiam iaculis rutrum elit, vitae placerat est fringilla ut. Nunc ornare tellus arcu, nec vehicula neque fermentum a.<br/>
@@ -34,6 +34,6 @@
       </div>
     </div>
   </div>
-<script src="../assets/js/enigme.js" charset="utf-8"></script>
+<script src="/assets/js/enigme.js" charset="utf-8"></script>
 </body>
 </html>

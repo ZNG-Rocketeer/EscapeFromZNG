@@ -6,7 +6,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <title>Connexion...</title>
-  <link rel="stylesheet" href="../assets/css/master.css">
+  <link rel="stylesheet" href="/assets/css/master.css">
 </head>
 <body>
   <div id="card" class="zng-center zng-margin-top">
@@ -24,7 +24,7 @@ session_start();
               }
             }
             if (isset($_POST['login']) && isset($_POST['pass'])) {
-              include '../assets/php/pdo/pdo_log.php';
+              include $_SERVER['DOCUMENT_ROOT'].'/assets/php/pdo/pdo_log.php';
 
               $log->execute(array($_POST['login'],md5($_POST['pass'])));
               $res = $log->fetchAll();

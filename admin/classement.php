@@ -4,26 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>Admin des classements</title>
-  <link rel="stylesheet" href="../assets/css/master.css">
-  <script src="../assets/js/admin.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="/assets/css/master.css">
+  <script src="/assets/js/admin.js" charset="utf-8"></script>
 </head>
 <body>
-  <?php include '../assets/php/gen_nav.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'].'/assets/php/gen_nav.php'; ?>
   <div class="zng-center zng-margin-top">
     <div class="zng-solo">
-      <div class="zng-card" >
-        <h2>Classement</h2>
-        <div>
-          <form  class="formsupp" action="supp.php" method="get">
-            <input class="zng-text-form" type="number" name="idEni" placeholder="idEni">
 
-            <input class="zng-text-form" type="number" name="temps" placeholder="temps">
-            <button type="submit" class="zng-btn-form" >Soumettre</button></th>
-          </form>
-          <div style="width:67%;min-height:100%;overflow-y:scroll;">
+            <div style="width:67%;min-height:100%;overflow-y:scroll;">
 
-            <?php include '../assets/php/pdo/pdo_init.php';
-            include '../assets/php/admin.php';
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/assets//php/pdo/pdo_init.php';
+            include $_SERVER['DOCUMENT_ROOT'].'/assets//php/admin.php';
 
             $sel = $pdo->prepare("select zng_user.id AS id, zng_user.pseudo AS pseudo,ResEni.idEni AS idEni,ResEni.temps AS temps from zng_user join ResEni where (zng_user.id = ResEni.id)", array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
             $sel->execute();
@@ -38,8 +30,7 @@
 
             echo '</table>';
             ?>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>

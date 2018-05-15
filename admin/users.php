@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Admin users</title>
-  <link rel="stylesheet" href="../assets/css/master.css">
+  <link rel="stylesheet" href="/assets/css/master.css">
 </head>
 <body>
-  <?php include '../assets/php/gen_nav.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'].'/assets/php/gen_nav.php'; ?>
   <div id="card" class="zng-center zng-margin-top">
 
       <table id="tableuser" class="zng-table zng-solo">
-        <?php include '../assets/php/pdo/pdo_init.php';
+        <?php include $_SERVER['DOCUMENT_ROOT'].'/assets//php/pdo/pdo_init.php';
 
         $sel = $pdo->prepare("select id,pseudo,nom,prenom,email,date_insc,date_naiss,ip from zng_user", array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
         $sel->execute();

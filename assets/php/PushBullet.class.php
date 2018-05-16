@@ -147,18 +147,18 @@ class PushBullet {
 		$queryData['type'] = $type;
 
 		switch($type) {
-			case 'note':
+        case 'note':
 			$queryData['title'] = $arg1;
 			$queryData['body']  = $arg2;
 			break;
 
-			case 'channel':
+        case 'channel':
 			$queryData['type'] = 'note';
 			$queryData['title'] = $arg1;
 			$queryData['body']  = $arg2;
 			break;
 
-			case 'link':
+        case 'link':
 			$queryData['title'] = $arg1;
 			$queryData['url']   = $arg2;
 
@@ -168,19 +168,19 @@ class PushBullet {
 			break;
 
 
-			case 'address':
+        case 'address':
 			$queryData['name']    = $arg1;
 			$queryData['address'] = $arg2;
 			break;
 
 
-			case 'list':
+        case 'list':
 			$queryData['title'] = $arg1;
 			$queryData['items'] = $arg2;
 			break;
 
 
-			case 'file':
+        case 'file':
 			$fullFilePath = realpath($arg1);
 
 			if (!is_readable($fullFilePath)) {
@@ -209,7 +209,7 @@ class PushBullet {
 			$this->_curlRequest($response->upload_url, 'POST', $response->data, FALSE, FALSE);
 			break;
 
-			default:
+        default:
 			throw new PushBulletException('Unknown push type.');
 		}
 
@@ -263,9 +263,9 @@ class PushBullet {
 			throw new PushBulletException('HTTP Error ' . $httpCode);
 		}
 
-		curl_close($curl);
+        curl_close($curl);
 
-		return json_decode($response);
+        return json_decode($response);
 	}
 }
 

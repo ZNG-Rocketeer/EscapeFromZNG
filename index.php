@@ -30,8 +30,8 @@ session_start()
 
     ?>
     <div class="zng-center">
-      <h1 class="zng-xxxlarge">EscapeFromZNG</h1>
-      <div class="zng-padding-header">
+      <h1 class="zng-title">escape FROm ZNG</h1>
+      <div class="zng-header">
         <button id="btn" class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal" onclick="play()" style= "font-weight:900"><?php
         if ($_SESSION['znglogged']=="yes") {
           echo "Jouez Maintenant";
@@ -44,7 +44,7 @@ session_start()
   </header>
 
   <noscript>
-    <span class="important">Javascript est désactivé, vous avez besoin d'activer javascript pour poursuivre sur notre site sans quoi votre expérience sera gachée</span>
+    <span class="important">Javascript est désactivé, vous avez besoin d\'activer javascript pour poursuivre sur notre site sans quoi votre expérience sera gachée</span>
   </noscript>
   <div class="zng-center zng-margin-top">
     <div class="zng-half">
@@ -52,7 +52,7 @@ session_start()
         <h2>Enigmes des créateurs</h2>
         <p>
           Vous avez été piraté et on vous a dérobé des informations privées de haute importance les hackers ont laissé une trace derrière eux déchiffrez leur nom et découvrez qui se cache derrière cette attaque.
-          <a href="enigme/" title="Suite explication enigmes"> Lire la suite ici </a>
+          <a href="" onclick="play()" title="Suite explication enigmes"> Lire la suite ici </a>
         </p>
         <p>
           <span class="important">Conseils:</span> vous devez avoir des connaissances en informatique pour continuer si vous n'en avez pas demandez de l'aide à un ami en partageant ce site

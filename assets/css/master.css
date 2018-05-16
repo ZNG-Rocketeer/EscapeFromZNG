@@ -74,16 +74,27 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   padding:0.01em 16px
 }
 
+@font-face {
+  font-family: "Devil";
+  src: url("../DevilBreezeBold.ttf");
+}
+
 #header>.zng-center{
   text-align:center;
   font-weight: bold;
-  font-family:'Verdana', Arial, sans-serif;
+text-shadow: 0px 2px 5px #727272,5px 5px 20px #494949;
+color: #cecece;
+  
   margin-bottom: 16px;
 }
 .zng-center{
     text-align:center;
 }
 
+.zng-title{
+font-size:48px;
+font-family:'Devil', Arial, sans-serif;
+}
 
 .zng-right{
   text-align: right;
@@ -127,16 +138,6 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
   background-color: black;
 }
 
-.zng-theme-l5 {color:#000 ; background-color:#e9fffd }
-.zng-theme-l4 {color:#000 ; background-color:#b7fff8 }
-.zng-theme-l3 {color:#000 ; background-color:#6efff1 }
-.zng-theme-l2 {color:#000 ; background-color:#26ffe9 }
-.zng-theme-l1 {color:#fff ; background-color:#00dcc6 }
-.zng-theme-d1 {color:#fff ; background-color:#008578 }
-.zng-theme-d2 {color:#fff ; background-color:#00766a }
-.zng-theme-d3 {color:#fff ; background-color:#00685d }
-.zng-theme-d4 {color:#fff ; background-color:#005950 }
-.zng-theme-d5 {color:#fff ; background-color:#004a43 }
 
 .zng-theme-light {color:#000 ; background-color:#e9fffd }
 .zng-theme-dark {
@@ -169,6 +170,9 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 .zng-disabled,.zng-btn:disabled,.zng-button:disabled{cursor:not-allowed;opacity:0.3}
 .zng-disabled *,:disabled *{pointer-events:none}
 .zng-btn.zng-disabled:hover,.zng-btn:disabled:hover{box-shadow:none}
+
+	
+
 /* TODO */
 .zng-solo{
   width: 90%;
@@ -184,10 +188,10 @@ article,aside,details,div,figcaption,figure,footer,header,main,menu,nav,section,
 }
 
 .zng-margin-top>.zng-solo{
-  margin-top: -4%;
+  margin-top: -2%;
 }
 
-.zng-margin-top{margin-top:-40px}
+.zng-margin-top{margin-top:0%}
 
 .zng-card{
   text-align:left;
@@ -404,6 +408,11 @@ button.profil{
 
 .zng-form{
   height: 500px;
+}
+
+.enigme-form
+{
+    height: 50%;
 }
 
 body{

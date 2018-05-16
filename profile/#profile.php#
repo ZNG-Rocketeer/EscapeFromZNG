@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Annuaire</title>
+  <link rel="stylesheet" href="../assets/css/master.css">
+</head>
+<body>
+<?php include '../assets/php/gen_nav.php';
+      if(isset($_GET['pseudo']){
+          $user_sql= $pdo->query("SELECT nom,prenom,email FROM zng_user WHERE pseudo LIKE ".$_GET['pseudo']);
+          $user = $user_sql->fetchAll();
+      }
+      else if(isset($_GET['name'])){
+          $user_sql= $pdo->query("SELECT nom,prenom,email FROM zng_user WHERE nom LIKE ".$_GET['name']." OR prenom LIKE ".$_GET['name']);
+          $user = $user_sql->fetchAll();
+      }
+      else if(isset($_GET['name']) && isset($_GET['pseudo']){
+          $user_sql= $pdo->query("SELECT nom,prenom,email FROM zng_user WHERE nom LIKE ".$_GET['name']." OR prenom LIKE ".$_GET['name']." AND pseudo LIKE ".$_GET['pseudo']);
+          $user = $user_sql->fetchAll();
+      }
+      else {
+          echo '<script>document.location.href="annuaire.php"</script>';
+      }
+?>
+  
+
+  <div id="card" class="zng-center zng-margin-top">
+    <div class="zng-solo">
+      <div  class="zng-card" style="min-height:500px">
+      <h2>Recherche annuaire</h2>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -31,7 +31,7 @@ else{
 
   if (!in_array($_SERVER['PHP_SELF'],$pages)) {
     echo "<script type=\"text/javascript\">
-    document.location.href=\"../\"
+    document.location.href=\"/connexion\"
     </script>";
   }
 }

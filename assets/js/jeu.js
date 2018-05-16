@@ -1,6 +1,6 @@
 function play(){
   if( document.getElementById("btn").innerHTML[0]=='J'){
-    document.location.href = "enigme/enigme_1_1.php";
+    document.location.href = "enigme/";
   }
   else{
     document.location.href = "connexion";

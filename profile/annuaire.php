@@ -14,7 +14,7 @@
     <div class="zng-solo">
       <div  class="zng-card" style="min-height:500px">
         <h2>Annuaire des utilisateurs</h2>
-        <form action="profil.php" method="get">
+        <form action="rechprofil.php" method="get">
           <label>
             Nom Prenom <br> <input class="zng-text-form" type="text" name="name">
           </label><br>

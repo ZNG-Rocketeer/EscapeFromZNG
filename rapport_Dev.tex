@@ -1,0 +1,110 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[OT1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\setlength\parindent{24pt}
+
+\usepackage{hyperref}
+
+\pagestyle{headings}
+
+\title{Projet Developpement Web}
+\author{Camil BRAHMI Erwan LE CORNEC Robin POULAT}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{Introduction}
+  L'objectif de ce projet était de développer un site Internet. À partir de ce point nous nous sommes mis d'accord sur le thème pour notre site: "\underline{Escape Game}". Notre site est donc basé sur une suite d'énigmes en code html/javascript/php.
+  
+
+\section{Moyens utilisés}
+\begin{itemize}
+\item Machines avec distribution Ubuntu
+\item Pour nous faciliter le travail de groupe : la plateforme github
+\item Serveur personnel dont le lien est \href{https://zngairone.tk}{EscapeFromZNG}
+\end{itemize}
+
+
+\section{Les différents scénarios}
+Pour commencer un visiteur doit s'inscrire avant de continuer sur le site, de cette inscription il devient joueur et peut également participer à la création.
+
+\subsection{L'administrateur}
+Il a la possibilité d'accéder aux données personnelles des utilisateurs qui se sont inscrits sur le site, il peut également bannir et supprimer des comptes ou bien des enregistrements de réponses d'énigmes.
+Lorsque quelqu'un s'inscrit au site il reçoit une notification à l'aide de l'application Pushbullet.
+Enfin il peut aller voir toute les pages afin de régler les problèmes pouvant survenir.
+
+\subsection{Le joueur}
+Pour accéder aux contenus du site le joueur doit s'inscrire, et donc s'enregistrer dans notre base de données. Il peut contacter l’administrateur à l'aide de la page de contact. Évidemment il peut tenter de résoudre les énigmes et s'échapper de notre site. Il peut ensuite voir son score et le comparer à ceux des autres joueurs sur la page classement.
+
+\subsection{Le créateur}
+Il peut contribuer au développement du site de deux façons:
+\begin{itemize}
+\item En postant ces fichiers php, HTML, JS et/ou CSS. Qui seront stockés dans un répertoire où seul l’administrateur pourra accéder.
+\item S'il n'a pas vraiment de compétences en informatique il peut écrire son idée d'énigme dans un message qui sera envoyé aux administrateurs.
+\item Il peut enfin écrire une devinette avec les différentes réponses acceptées qu'il peut aussi mettre dans les catégories correspondantes.
+\end{itemize}
+
+\section{Répartition des rôles}
+
+\underline{Erwan :}
+\begin{itemize}
+\item La construction du site
+\item Les requêtes pdo
+\item Quelques énigmes
+\item 
+\end{itemize}
+
+\underline{Camil :}
+\begin{itemize}
+\item La base de données
+\item La page post du créateur
+\item Quelques énigmes
+\end{itemize}
+
+\underline{Robin :}
+\begin{itemize}
+\item Pages php et html
+\item Relecture et amélioration du css
+\item Quelques énigmes
+\end{itemize}
+
+\section{La base de données}
+\underline{zng_user}: Contient toutes les données des utilisateurs.
+\underline{ResEni}:Les scores des joueurs sur chaque énigme.
+\underline{CommuEni}: Les questions/réponses des utilisateurs
+\underline{NomEni}: Les noms de chaque énigmes
+\underline{PostEni}: Une table que nous avons pas réussi à completer mais nous avons décidé de la laisser pour garder l'idée.
+
+\section{Difficultés rencontrées}
+\subsection{Problème rencontre pour la mise en place du serveur}
+Nous devions trouver un moyen facile de travailler ensemble et pouvoir  voir nos modifications directement en ligne (sans avoir besoin d'aller à la fac pour utiliser les serveurs). D'où la mise en place de se serveur.
+\subsection{Stocker des fichiers sur la bdd}
+Nous avons eu des problèmes concernant l'ajout de fichiers téléchargés depuis le site et ceci dans la base de donnée, vous trouverez des recherches de cela dans notre code et nous avons essayer de le contourner en utilisant des répertoires et fichiers  temporaires
+\subsection{Sécurité du site}
+Concernant la sécurité du site internet, nous savons que les utilisateurs peuvent se déplacer d'une énigme à l'autre sans avoir besoin de répondre à la précédente. Les fonctions code en js devait avoir un obfuscateur pour améliorer  la sécurité et caché les fonctions permettant de trouver les répondes aux énigmes.
+
+Le site ne peut pour le moment pas supporter un trop grand nombre de connexions en simultané.
+
+\section{Conclusion}
+Nous sommes satisfait de notre projet car notre site est quasiment
+celui que nous avions imaginé. Même si un site semble simple en apparence,
+derière celui-ci se cache un vrai travail. Avec une bonne entente dans
+ce goupre nous a permis de mener à bien ce projet.
+
+\section{Avis personnels de ce projet}
+\underline{Camil:} "Un premier pas dans le développement Web qui nous a permis de découvrir qu'avec une simple base on peut en faire quelque chose d'intéressant. De plus travailler avec mes camarades m'a permis de progresser en travail de groupe et en organisation."
+\newline
+\underline{Erwan:} "En réalisant ce projet j'ai découvert de nouvelles idées à réaliser en groupe, dans le thème de ce groupe zanga justement nous allons rapprocher nos sites afin d'abord d'avoir une base de donnée commune et ensuite proposer de nouveaux sites à cibles différentes"
+\newline
+\underline{Robin:} "Concernant ce site internet, je tiens à féliciter Camil d'avoir trouvé l'idée (quand il me l'a dis j'ai tout de suite accroché) et remercier Erwan de nous accueillir pour que l'on code ensemble. Je trouve se site innovateur et il me donne envie de jouer et de continuer à y travailler dessus. Nous avons encore des choses à améliorer mais nous le continuerons même après cette soutenance."
+
+\end{document}

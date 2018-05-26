@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start()
 ?>
 
@@ -92,6 +92,14 @@ session_start()
 	<button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal">Jouer</button>
 	</a>
 
+<br/>
+        <a href="apropos.php">
+        <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal">A Propos de nous</button>
+        </a>
+<br/>
+        <a href="contact">
+        <button class="zng-btn zng-xlarge zng-theme-dark zng-hover-teal">Nous contacter</button>
+        </a>
         </p>
       </div>
     </div>

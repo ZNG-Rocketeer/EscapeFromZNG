@@ -5,7 +5,8 @@ $pages=array("/connexion/index.php",
 "/connexion/signup.php",
 "/connexion/mdpoublie.php",
 "/connexion/log.php",
-"/classement/index.php");
+"/classement/index.php",
+"/apropos.php");
 session_start();
 echo "<!-- Header -->
 <nav class=\"zng-padding zng-nav\">

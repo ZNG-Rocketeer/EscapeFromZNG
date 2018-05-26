@@ -30,7 +30,7 @@
             <textarea class="zng-textarea-form" name="question" id="question" rows="8" cols="80"></textarea>
             <br/>
             <label for="reponse">Réponse</label><br>
-            <input class="zng-text-form" type="text" name="reponse" id=reponse">
+            <input class="zng-text-form" type="text" name="reponse" id="reponse">
 	    <br/>
 	    <input class="zng-btn-form" type="submit" name="Valider" value="Valider">
 	    </form>
@@ -57,8 +57,8 @@
 	    <td><input type="file" name="css" id="css" value="css"></td>
 	    <tr>
 	    <tr>
-	    td><label for="css">Commentaire sur vos fichiers : </label></td>
-	    <td><input type="file" name="css" id="css" value="css"></td>
+	    <td><label for="css">Commentaire sur vos fichiers <br/> depuis un fichier .txt : </label></td>
+	    <td><input type="file" name="txt" id="txt" value="txt"></td>
 	    </tr>
 	    </table>
 	    <br/>
